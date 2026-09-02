@@ -1,0 +1,118 @@
+{
+ "H-H": {
+  "type": "single",
+  "energy_kJ_mol": 431,
+  "source": "https://en.wikipedia.org/wiki/Bond_dissociation_energy (retrieved 2026-09-02 via api.wikimedia.org core REST: https://api.wikimedia.org/core/v1/wikipedia/en/page/Bond_dissociation_energy; page tables cite Blanksby & Ellison Acc. Chem. Res. 36:255 (2003) doi:10.1021/ar020230d and CRC Handbook)",
+  "note": "Wikipedia table value (103 kcal/mol); high-precision value DH°298(H-H)=435.780 kJ/mol cited on same page from Luo, CRC Handbook 97th ed"
+ },
+ "C-C": {
+  "type": "single",
+  "energy_kJ_mol": null,
+  "source": "https://en.wikipedia.org/wiki/Bond_dissociation_energy (retrieved 2026-09-02 via api.wikimedia.org core REST: https://api.wikimedia.org/core/v1/wikipedia/en/page/Bond_dissociation_energy; page tables cite Blanksby & Ellison Acc. Chem. Res. 36:255 (2003) doi:10.1021/ar020230d and CRC Handbook)",
+  "note": "Wikipedia gives range 347-377 kJ/mol (83-90 kcal/mol, in typical alkane) - range, not point value"
+ },
+ "C-F": {
+  "type": "single",
+  "energy_kJ_mol": 481,
+  "source": "https://en.wikipedia.org/wiki/Bond_dissociation_energy (retrieved 2026-09-02 via api.wikimedia.org core REST: https://api.wikimedia.org/core/v1/wikipedia/en/page/Bond_dissociation_energy; page tables cite Blanksby & Ellison Acc. Chem. Res. 36:255 (2003) doi:10.1021/ar020230d and CRC Handbook)",
+  "note": "in CH3F (115 kcal/mol)"
+ },
+ "H-F": {
+  "type": "single",
+  "energy_kJ_mol": 569,
+  "source": "https://en.wikipedia.org/wiki/Bond_dissociation_energy (retrieved 2026-09-02 via api.wikimedia.org core REST: https://api.wikimedia.org/core/v1/wikipedia/en/page/Bond_dissociation_energy; page tables cite Blanksby & Ellison Acc. Chem. Res. 36:255 (2003) doi:10.1021/ar020230d and CRC Handbook)",
+  "note": "136 kcal/mol"
+ },
+ "O=O": {
+  "type": "double",
+  "energy_kJ_mol": 498,
+  "source": "https://en.wikipedia.org/wiki/Bond_dissociation_energy (retrieved 2026-09-02 via api.wikimedia.org core REST: https://api.wikimedia.org/core/v1/wikipedia/en/page/Bond_dissociation_energy; page tables cite Blanksby & Ellison Acc. Chem. Res. 36:255 (2003) doi:10.1021/ar020230d and CRC Handbook)",
+  "note": "119 kcal/mol"
+ },
+ "N≡N": {
+  "type": "triple",
+  "energy_kJ_mol": 945,
+  "source": "https://en.wikipedia.org/wiki/Bond_dissociation_energy (retrieved 2026-09-02 via api.wikimedia.org core REST: https://api.wikimedia.org/core/v1/wikipedia/en/page/Bond_dissociation_energy; page tables cite Blanksby & Ellison Acc. Chem. Res. 36:255 (2003) doi:10.1021/ar020230d and CRC Handbook)",
+  "note": "226 kcal/mol"
+ },
+ "C=C": {
+  "type": "double",
+  "energy_kJ_mol": null,
+  "source": "https://en.wikipedia.org/wiki/Bond_dissociation_energy (retrieved 2026-09-02 via api.wikimedia.org core REST: https://api.wikimedia.org/core/v1/wikipedia/en/page/Bond_dissociation_energy; page tables cite Blanksby & Ellison Acc. Chem. Res. 36:255 (2003) doi:10.1021/ar020230d and CRC Handbook)",
+  "note": "Wikipedia: ~710 kJ/mol (~170 kcal/mol, ethylene H2C=CH2); approximate"
+ },
+ "C≡C": {
+  "type": "triple",
+  "energy_kJ_mol": null,
+  "source": "https://en.wikipedia.org/wiki/Bond_dissociation_energy (retrieved 2026-09-02 via api.wikimedia.org core REST: https://api.wikimedia.org/core/v1/wikipedia/en/page/Bond_dissociation_energy; page tables cite Blanksby & Ellison Acc. Chem. Res. 36:255 (2003) doi:10.1021/ar020230d and CRC Handbook)",
+  "note": "Wikipedia: ~960 kJ/mol (~230 kcal/mol, acetylene HC≡CH); approximate"
+ },
+ "F-F": {
+  "type": "single",
+  "energy_kJ_mol": 154,
+  "source": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Bond_Energies (Table 1 'Average Bond Energies (kJ/mol)', accessed 2026-09-02)",
+  "note": "cross-check: NIST WebBook F2 De not extracted; common CRC value 159 kJ/mol not independently verified here"
+ },
+ "Cl-Cl": {
+  "type": "single",
+  "energy_kJ_mol": 239,
+  "source": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Bond_Energies (Table 1 'Average Bond Energies (kJ/mol)', accessed 2026-09-02)",
+  "note": "cross-check: NIST WebBook Cl2 note gives D0=2.479349 eV = 239.25 kJ/mol (Le Roy 1973 convergence limit) - consistent"
+ },
+ "Br-Br": {
+  "type": "single",
+  "energy_kJ_mol": 193,
+  "source": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Bond_Energies (Table 1 'Average Bond Energies (kJ/mol)', accessed 2026-09-02)"
+ },
+ "I-I": {
+  "type": "single",
+  "energy_kJ_mol": 149,
+  "source": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Bond_Energies (Table 1 'Average Bond Energies (kJ/mol)', accessed 2026-09-02)",
+  "note": "Wikipedia BDE page prose: accepted BDE of diiodine = 36.1 kcal/mol = 151 kJ/mol; LibreTexts table says 149 - small discrepancy flagged"
+ },
+ "O-O": {
+  "type": "single",
+  "energy_kJ_mol": 146,
+  "source": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Bond_Energies (Table 1 'Average Bond Energies (kJ/mol)', accessed 2026-09-02)"
+ },
+ "N-N": {
+  "type": "single",
+  "energy_kJ_mol": 160,
+  "source": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Bond_Energies (Table 1 'Average Bond Energies (kJ/mol)', accessed 2026-09-02)"
+ },
+ "Si-Si": {
+  "type": "single",
+  "energy_kJ_mol": 340,
+  "source": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Bond_Energies (Table 1 'Average Bond Energies (kJ/mol)', accessed 2026-09-02)"
+ },
+ "H-Cl": {
+  "type": "single",
+  "energy_kJ_mol": 427,
+  "source": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Bond_Energies (Table 1 'Average Bond Energies (kJ/mol)', accessed 2026-09-02)"
+ },
+ "H-Br": {
+  "type": "single",
+  "energy_kJ_mol": 363,
+  "source": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Bond_Energies (Table 1 'Average Bond Energies (kJ/mol)', accessed 2026-09-02)"
+ },
+ "H-I": {
+  "type": "single",
+  "energy_kJ_mol": 295,
+  "source": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Bond_Energies (Table 1 'Average Bond Energies (kJ/mol)', accessed 2026-09-02)"
+ },
+ "C-Cl": {
+  "type": "single",
+  "energy_kJ_mol": 339,
+  "source": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Bond_Energies (Table 1 'Average Bond Energies (kJ/mol)', accessed 2026-09-02)"
+ },
+ "C-Br": {
+  "type": "single",
+  "energy_kJ_mol": 276,
+  "source": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Bond_Energies (Table 1 'Average Bond Energies (kJ/mol)', accessed 2026-09-02)"
+ },
+ "C-I": {
+  "type": "single",
+  "energy_kJ_mol": 240,
+  "source": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Chemical_Bonding/Fundamentals_of_Chemical_Bonding/Bond_Energies (Table 1 'Average Bond Energies (kJ/mol)', accessed 2026-09-02)"
+ }
+}

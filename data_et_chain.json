@@ -1,0 +1,402 @@
+{
+  "meta": {
+    "title": "生物电子转移链逐站参数考古：光合反应中心（任务A）+ 线粒体呼吸链 Complex I-IV（任务B）",
+    "purpose": "为化学间隙层 v0.2『生物ET链=驻留深度甜蜜点级联』主张提供逐站参数底座（ΔG°、k、距离、λ），供甜蜜点比值判读（任务C）",
+    "accessed": "2026-09-02",
+    "discipline_note": "每个数值只来自 2026-09-02 实际访问到的文本（Europe PMC REST / PubMed eutils / NCBI PMC efetch / PMC 网页 / Nobel PDF / Crossref）；访问不到的标 unverified 并放『待核验参考』，训练记忆值一律不入核验字段。",
+    "lambda_calibration_note": "λ 口径（全部核验）：RC 初始电荷分离 λ=0.25 eV（Marcus Nobel 讲稿）；RC 初始电荷分离 λ=0.25-0.5 eV（Moser/Dutton 2006 综述）；RC 细胞色素c2→P λ=0.5 eV（Lin 1994）/0.96±0.07 eV（Venturoli 1998 拟合）；Complex I λ=0.5 eV（Hayashi/Stuchebrukhov 采用）与 0.7-0.8 eV generic（Sci Rep 2017）；bc1 2Fe2S→c1 λ=1.0 eV（Millett 综述）；呼吸链 generic λ=0.7 eV（Moser/Dutton 2006：『we use a generic value of 0.7 eV』）。",
+    "region_rule": "任务C判读规则见 分析框架_ET链甜蜜点_v0.1.py：r=(-ΔG°)/λ；r<0 前史 uphill / 0≤r<0.8 normal / 0.8≤r≤1.25 activationless / r>1.25 inverted"
+  },
+
+  "chain_A_photosynthetic_RC": {
+    "organism": "Rhodobacter sphaeroides（紫色细菌光合反应中心）",
+    "sites": [
+      {
+        "site": "A0_cytC2_to_P",
+        "donor": "cyt c2 (Fe2+/Fe3+)", "acceptor": "P/P+ (特殊对 BChl 二聚体 P870)",
+        "em_donor_mV": null,
+        "em_acceptor_mV": {"value": 505, "status": "verified", "note": "野生型 P+/P 中点电位 505 mV；突变体系可调 410-765 mV", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=9635776&rettype=abstract&retmode=text", "quote": "characterized by altered midpoint redox potentials of P+/P varying from 410 mV to 765 mV (as compared to 505 mV for wild type)"},
+        "dG_eV": {"value": -0.16, "range": [-0.42, -0.065], "status": "verified", "note": "野生型 -160 meV；突变体系 -65 至 -420 meV（随 P/P+ 电位改变 350 mV）", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=7947761&rettype=abstract&retmode=text", "quote": "values for the free energy difference for this electron transfer reaction ranging from -65 to -420 meV compared to -160 meV for wild type"},
+        "lambda_eV": {"value": 0.5, "alt": {"value": 0.96, "pm": 0.07, "note": "Venturoli 1998 全局拟合值（同体系不同方法）", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=9635776&rettype=abstract&retmode=text"}, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=7947761&rettype=abstract&retmode=text", "quote": "well fit by a Marcus equation using a reorganization energy of 500 meV"},
+        "k_s1": {"value": 1.04e6, "note": "野生型时间常数 960 ns；突变体系 80-7730 ns（350 mV 驱动力跨度内 >2 个量级变化）", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=7947761&rettype=abstract&retmode=text", "quote": "measured values ranging from 7730 to 80 ns compared to 960 ns for wild type；结合态 τ≈1 μs（Miyashita 2005）"},
+        "distance_A": {"value": null, "status": "unverified", "note": "跨水界面隧穿 β=1.1 Å⁻¹（Miyashita 2005 核验），但本站供受体边到边距离数值未核到"},
+        "region_input": "normal",
+        "sources": [
+          "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=7947761&rettype=abstract&retmode=text",
+          "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=9635776&rettype=abstract&retmode=text",
+          "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=15738426&rettype=abstract&retmode=text"
+        ],
+        "accessed": "2026-09-02"
+      },
+      {
+        "site": "A1_Pstar_to_Bchl",
+        "donor": "P* (P870 激发态)", "acceptor": "B_A (单体细菌叶绿素 BChl)",
+        "dG_eV": {"value": -0.25, "status": "verified", "note": "Marcus 对 P*→BPh 首步的表述：驱动力仅占 BChl2* 激发能 1.38 eV 中的 ~0.25 eV（讲稿把 P*→BPh 作为一步处理）", "source": "https://www.nobelprize.org/uploads/2018/06/marcus-lecture.pdf", "quote": "To avoid wasting the excitation energy of the BChl2* unduly it is necessary that [the driving force] of this first electron transfer to BPh be small. (It is only about 0.25 eV out of an overall excitation energy of BChl2* of 1.38 eV.)"},
+        "lambda_eV": {"value": 0.25, "range": [0.25, 0.5], "status": "verified", "note": "两个口径：Nobel 讲稿 λ~0.25 eV（讲稿原句）；Moser/Dutton 2006 综述对 RC 初始电荷分离给 0.25-0.5 eV 区间", "source_quote_2": "The measured values of reorganization energy of clear tunnelling reactions range from the remarkably low 0.25–0.5 eV of the pico- to nanosecond initial charge separation deep in the reaction centres (Iwaki & Itoh 1989; Haffa et al. 2002)", "source_2": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/"},
+        "k_s1": {"value": 2.5e11, "note": "时间常数 3-5 ps（室温，A 支路）；另有 B*→P+BA− 通道 0.2-0.5 ps", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6023262&rettype=xml", "quote": "the P* → P+BA−, P+BA− → P+HA−, and P+HA− → P+QA− electron-transfer (ET) steps occur with time constants of 3–5, 0.5–1, and ∼200 ps, respectively"},
+        "distance_A": {"value": null, "status": "unverified", "note": "P-B 边到边距离未在本次开放获取文本核到（IUCrJ 2022 结构论文只给氢键网络距离）"},
+        "sources": [
+          "https://www.nobelprize.org/uploads/2018/06/marcus-lecture.pdf",
+          "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6023262&rettype=xml",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/"
+        ],
+        "accessed": "2026-09-02"
+      },
+      {
+        "site": "A2_Bchl_to_Bphe",
+        "donor": "P+BA− 中的 BA−", "acceptor": "H_A (细菌脱镁叶绿素 Bphe)",
+        "dG_eV": {"value": null, "status": "unverified", "note": "本站单独 ΔG° 未在开放获取文本核到；Marcus 讲稿把 P*→BPh 合并为一步给 -0.25 eV"},
+        "lambda_eV": {"value": null, "status": "unverified", "note": "单站 λ 未核到；沿用 RC 初始电荷分离整体口径 0.25-0.5 eV（Moser/Dutton 2006，verified）"},
+        "k_s1": {"value": 1.3e12, "note": "时间常数 0.5-1 ps（取 0.75 ps 中值 → 1.3e12 s⁻¹）", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6023262&rettype=xml", "quote": "time constants of 3–5, 0.5–1, and ∼200 ps"},
+        "distance_A": {"value": null, "status": "unverified"},
+        "sources": ["https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6023262&rettype=xml"],
+        "accessed": "2026-09-02"
+      },
+      {
+        "site": "A3_Bphe_to_QA",
+        "donor": "P+HA− 中的 HA−", "acceptor": "Q_A (初级醌，泛醌-10)",
+        "dG_eV": {"value": null, "status": "unverified", "note": "单站 ΔG° 未核到。可核验的锚点：P+QA− 相对激发态 P* 的标准自由能 = -910±20 meV（pH 8，天然泛醌）——即三步总驱动力 0.91 eV", "anchor_source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=10866934&rettype=abstract&retmode=text", "anchor_quote": "The standard free energy of the primary stable charge pair relative to that of the excited dimer was -910 +/- 20 meV at pH 8 and with native ubiquinone"},
+        "lambda_eV": {"value": null, "status": "unverified", "note": "单站 λ 未核到；QA→QB 位点区域 λ 口径见 A4"},
+        "k_s1": {"value": 5e9, "note": "时间常数 ~200 ps → 5e9 s⁻¹", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6023262&rettype=xml", "quote": "∼200 ps"},
+        "distance_A": {"value": null, "status": "unverified", "note": "Marcus 讲稿表述 BPh→Q 'in 200 psec'，无距离数值"},
+        "sources": [
+          "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6023262&rettype=xml",
+          "https://www.nobelprize.org/uploads/2018/06/marcus-lecture.pdf",
+          "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=10866934&rettype=abstract&retmode=text"
+        ],
+        "accessed": "2026-09-02"
+      },
+      {
+        "site": "A4_QA_to_QB",
+        "donor": "Q_A−", "acceptor": "Q_B (次级醌)",
+        "dG_eV": {"value": null, "status": "unverified", "note": "QA→QB 自由能差未核到具体数值。已核验定性结论：(1) QA/QB 间 -ΔG° 对很多候选醌『太小以致无法检测』QB 占位（Giangiacomo/Dutton PNAS 1989）；(2) 修饰 QB 位点质子化基团簇与初级半醌的相互作用能 ~50 meV（Tiede 组延迟荧光论文）", "quote1": "For many of the compounds previously tested for binding at the QB site, the -delta G0e- between QA and QB is too small to permit detection of the functional quinone in the QB site", "source1": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=2649889&rettype=abstract&retmode=text", "quote2": "The interaction energy (approximately 50 meV) between the cluster of the protonatable groups around GluL212 and the primary semiquinone provides evidence for functional linkage between the two quinone binding pockets", "source2": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=10866934&rettype=abstract&retmode=text"},
+        "lambda_eV": {"value": null, "status": "unverified", "note": "QA→QB 单步 λ 未核到。相关已核口径：QB 位点再氧化（伴随质子交换）λ=1.1-1.5 eV（Moser/Dutton 2006 引 Moser 2000）", "related_quote": "to the high 1.1–1.5 eV for the more polar QB site reoxidation associated with proton exchange (Moser et al. 2000)", "related_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/"},
+        "k_s1": {"value": 5e4, "range": [1e4, 1e5], "status": "verified", "note": "Moser/Dutton 2006：QA 到 QB 位点 14 Å 隧穿，在适中自由能驱动下 10^4-10^5 s⁻¹", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/", "quote": "electron tunnelling through 14 Å from QA to the QB site promotes quinone to hydroquinone reduction. Driven by a modest free energy, electron tunnelling occurs at 10^4–10^5 s−1"},
+        "distance_A": {"value": 14, "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/", "quote": "electron tunnelling through 14 Å from QA to the QB site"},
+        "sources": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/",
+          "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=2649889&rettype=abstract&retmode=text",
+          "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=10866934&rettype=abstract&retmode=text"
+        ],
+        "accessed": "2026-09-02"
+      },
+      {
+        "site": "A5_charge_recombination_Pplus_Hminus",
+        "donor": "HA−", "acceptor": "P+（空穴-电子复合，废热/保护通道）",
+        "dG_eV": {"value": -1.1, "status": "verified", "source": "https://www.nobelprize.org/uploads/2018/06/marcus-lecture.pdf", "quote": "it is necessary that the back transfer, a 'hole-electron recombination' step, be slow, even though it is a very highly exothermic process (~1.1 eV)"},
+        "lambda_eV": {"value": 0.25, "status": "verified", "source": "https://www.nobelprize.org/uploads/2018/06/marcus-lecture.pdf", "quote": "It has been suggested that the small λ (~0.25eV) and the resulting inverted region effect play a significant role in providing this essential condition for the effectiveness of the photosynthetic reaction center"},
+        "k_s1": {"value": null, "status": "unverified", "note": "本步速率常数未在本次通道核到具体数值（已知定性：比前向 ET 慢多个量级）；PSII 同类电荷复合 -ΔG°≈1.2 eV/32 Å 时 k=3.4e-3 s⁻¹（Boussac 2013，前次考古已核，PMID 23448315）"},
+        "distance_A": {"value": null, "status": "unverified"},
+        "region_input": "inverted",
+        "sources": ["https://www.nobelprize.org/uploads/2018/06/marcus-lecture.pdf"],
+        "accessed": "2026-09-02"
+      },
+      {
+        "site": "A6_QB_site_chemistry_lambda",
+        "donor": "QB−/QBH", "acceptor": "QB 位点质子交换耦合氧化还原",
+        "dG_eV": {"value": null, "status": "unverified"},
+        "lambda_eV": {"value": 1.3, "range": [1.1, 1.5], "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/", "quote": "the high 1.1–1.5 eV for the more polar QB site reoxidation associated with proton exchange (Moser et al. 2000)"},
+        "k_s1": {"value": null, "status": "unverified"},
+        "distance_A": {"value": null, "status": "unverified"},
+        "sources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/"],
+        "accessed": "2026-09-02"
+      }
+    ],
+    "chain_level_notes": [
+      {
+        "claim": "RC 整体量子效率近 1（'The CS process proceeds with a near-unity quantum efficiency'）",
+        "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6023262&rettype=xml",
+        "status": "verified", "accessed": "2026-09-02"
+      },
+      {
+        "claim": "B 支路（蓝光激发）电荷分离数百 fs 生成、~15 ps 衰减——对称支路不用来输运，只做光保护",
+        "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=11705365&rettype=abstract&retmode=text",
+        "status": "verified", "accessed": "2026-09-02"
+      },
+      {
+        "claim": "蛋白质弛豫控制的生物 ET：多数生物 ET 只轻微放热（ΔG ≥ -100 meV），Langevin 拟合 λ 落在 70-100 meV（弛豫控制口径，与经典 λ 口径不同——引用时注意口径差异）",
+        "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=1301303&rettype=xml",
+        "status": "verified", "accessed": "2026-09-02"
+      }
+    ]
+  },
+
+  "chain_B_respiratory_chain": {
+    "complex_I": {
+      "sites": [
+        {
+          "site": "B1_FMNL_to_N3 (代表 FMN 后第一跳)",
+          "donor": "FMNH2 (FMN, 黄素单核苷酸)", "acceptor": "N3 [4Fe-4S]",
+          "dG_eV": {"value": 0, "status": "verified", "note": "FMN 到 N2 全链电位剖面『基本平坦』（essentially flat），N2 比其余高 ~100 meV；Hayashi 模型对所有 FeS 间步骤取 ΔG°=0 eV（除 N6b→N2 为 -0.15 eV）", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5511282&rettype=xml", "quote1": "The resulting profile of the redox potential is essentially flat, with no significant change from the point of electron injection at the docking of NADH to flavin mononucleotide (FMN) down to the terminal cofactor N2 with a ~100 meV higher potential", "quote2": "the experimental driving force ΔG = −0.15 eV for N6b→N2 and ΔG = 0 eV for all the other processes"},
+          "lambda_eV": {"value": 0.5, "alt": {"value": 0.75, "range": [0.7, 0.8], "note": "Sci Rep 2017: Complex I 文献常设 generic λ≈0.7-0.8 eV；并主张『没有可通用的 λ，应使用有效重组能 λr』", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5511282&rettype=xml"}, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml", "quote": "Here we employ the generic reorganization energy λ = 0.5 eV"},
+          "k_s1": {"value": 1300, "note": "N3→N1b 干蛋白计算值 1.3e3 s⁻¹，含结构水 2.9e6 s⁻¹（本站相邻跳）", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "distance_A": {"value": null, "status": "unverified", "note": "FMN→N3 距离未单独核到；FeS 间各跳见表 B1.x"},
+          "sources": [
+            "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml",
+            "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5511282&rettype=xml"
+          ],
+          "accessed": "2026-09-02"
+        },
+        {
+          "site": "B1_N3_to_N1b", "donor": "N3 [4Fe-4S]", "acceptor": "N1b [2Fe-2S]",
+          "dG_eV": {"value": 0, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml", "quote": "ΔG = 0 eV for all the other processes"},
+          "lambda_eV": {"value": 0.5, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "k_s1": {"value": 64000, "note": "干蛋白 6.4e4 s⁻¹（N1b→N4 行）", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "distance_A": {"value": {"c_to_c": 14.0, "g_to_g": 11.0}, "status": "verified", "note": "Table 1: N3→N1b C-to-C 14.0 Å, G-to-G 11.0 Å", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "sources": ["https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"], "accessed": "2026-09-02"
+        },
+        {
+          "site": "B1_N1b_to_N4", "donor": "N1b [2Fe-2S]", "acceptor": "N4 [4Fe-4S]",
+          "dG_eV": {"value": 0, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "lambda_eV": {"value": 0.5, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "k_s1": {"value": 64000, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml", "quote": "N1b→N4 ... 6.4 × 10^4"},
+          "distance_A": {"value": {"c_to_c": 13.5, "g_to_g": 10.6}, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "sources": ["https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"], "accessed": "2026-09-02"
+        },
+        {
+          "site": "B1_N4_to_N5", "donor": "N4 [4Fe-4S]", "acceptor": "N5 [4Fe-4S]",
+          "dG_eV": {"value": 0, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "lambda_eV": {"value": 0.5, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "k_s1": {"value": 2.8e7, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml", "quote": "N4→N5 ... 2.8 × 10^7"},
+          "distance_A": {"value": {"c_to_c": 12.2, "g_to_g": 8.7}, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "sources": ["https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"], "accessed": "2026-09-02"
+        },
+        {
+          "site": "B1_N5_to_N6a", "donor": "N5 [4Fe-4S]", "acceptor": "N6a [4Fe-4S]",
+          "dG_eV": {"value": 0, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "lambda_eV": {"value": 0.5, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "k_s1": {"value": 9.1, "note": "全链最长跳（14.1 Å 边到边 / ~17 Å 中心到中心），干蛋白 9.1 s⁻¹、含水 7.3e3 s⁻¹；被指为可能限速步", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml", "quote2": "The longest distance, 14.1 Å edge to-edge (~17 Å center-to-center), is between N5 and N6a cofactors, suggesting that this step might be the rate limiting in the entire electron-transfer chain", "source2": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5511282&rettype=xml"},
+          "distance_A": {"value": {"c_to_c": 16.8, "g_to_g": 14.0, "edge_to_edge_alt": 14.1}, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "sources": [
+            "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml",
+            "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5511282&rettype=xml"
+          ], "accessed": "2026-09-02"
+        },
+        {
+          "site": "B1_N6a_to_N6b", "donor": "N6a [4Fe-4S]", "acceptor": "N6b [4Fe-4S]",
+          "dG_eV": {"value": 0, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "lambda_eV": {"value": 0.5, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "k_s1": {"value": 2.8e6, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "distance_A": {"value": {"c_to_c": 12.1, "g_to_g": 9.3}, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "sources": ["https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"], "accessed": "2026-09-02"
+        },
+        {
+          "site": "B1_N6b_to_N2", "donor": "N6b [4Fe-4S]", "acceptor": "N2 [4Fe-4S] (末端簇)",
+          "dG_eV": {"value": -0.15, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml", "quote": "the experimental driving force ΔG = −0.15 eV for N6b→N2"},
+          "lambda_eV": {"value": 0.5, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "k_s1": {"value": 19000, "note": "干蛋白 1.9e4 s⁻¹，含水 1.8e6 s⁻¹", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "distance_A": {"value": {"c_to_c": 13.7, "g_to_g": 10.5}, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"},
+          "sources": ["https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4230448&rettype=xml"], "accessed": "2026-09-02"
+        },
+        {
+          "site": "B1_N2_to_Q",
+          "donor": "N2 (末端 [4Fe-4S])", "acceptor": "泛醌/甲基萘醌 (Q 池)",
+          "dG_eV": {"value": null, "status": "unverified", "note": "呼吸链 CI 的 N2→Q 单步 ΔG° 未核到。已核锚点：(1) N2 比其余 FeS 簇电位高 ~100 meV（Sci Rep 2017）；(2) 光合 CI（PS-CI）实测 N2=-220±15 mV、N1=-230±15 mV、N0<-550 mV、PQ 池 +80 mV（→N2 到 Q 池跨度 ~0.3 eV），半醌距 N2 ~12 Å（Nature Comm 2021）", "psci_source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8433477&rettype=xml", "psci_quote": "The reduction potentials were estimated to be −220 and −230 mV ± 15 mV vs the standard hydrogen electrode (SHE) for N2 and N1, respectively ... overall electron transport to the quinone pool (at +80 mV) is energetically very favourable in PS-CI ... a quinone radical, which is anticipated to be ~12 Å from N2 by analogy with R-CI"},
+          "lambda_eV": {"value": null, "status": "unverified"},
+          "k_s1": {"value": null, "status": "unverified", "note": "全链口径：电子到达 Q 的总隧穿时间 ~200 μs（另一报道 ~90 μs），催化周转 5 ms", "chain_source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5511282&rettype=xml", "chain_quote": "~200 μs (~90 μs was reported in ref. 23) ... catalytic turnover (5 ms)"},
+          "distance_A": {"value": null, "status": "unverified", "note": "呼吸链未核到；PS-CI 类比值 ~12 Å（verified）"},
+          "sources": [
+            "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5511282&rettype=xml",
+            "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8433477&rettype=xml"
+          ], "accessed": "2026-09-02"
+        }
+      ],
+      "complex_level_notes": [
+        {
+          "claim": "7 个 FeS 簇构成 84 Å 长 ET 链，簇间距最大 14 Å；N1a 与 N7 不在主链上（off-pathway）",
+          "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=16051796&rettype=abstract&retmode=text",
+          "quote": "One binuclear and six tetranuclear clusters are arranged, maximally 14 angstroms apart, in an 84-angstrom-long electron transfer chain. The binuclear cluster N1a and the tetranuclear cluster N7 are not in this pathway.",
+          "status": "verified", "accessed": "2026-09-02"
+        },
+        {
+          "claim": "『能量浪费站』问题之 N1a：Hirst 组操纵 N1a 电位（±~0.16 V）证明 N1a 不影响黄素 ROS 生成，推断其功能是酶组装/稳定性——不是热力学浪费站",
+          "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=23980528&rettype=abstract&retmode=text",
+          "quote": "We conclude that cluster N1a does not affect reactive oxygen species production by the complex I flavin; it is probably required for enzyme assembly or stability.",
+          "status": "verified", "accessed": "2026-09-02"
+        },
+        {
+          "claim": "『能量浪费站』问题之学术主流解释：FeS 簇 multitude 之谜——进化模块拼装产物，主链用于调控隧穿速率；平坦电位剖面=极少下滑自由能的稳健设计（不是浪费，是保能）",
+          "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=26944855&rettype=abstract&retmode=text",
+          "quote1": "The question was partly answered by investigations on the evolution of the complex revealing the stepwise construction of the electron transfer domain from several modules.",
+          "quote2": "Fast enzyme kinetics revealed that this chain of Fe/S-clusters is used to regulate electron-tunneling rates within the complex.",
+          "quote3": "The electron has to undergo a number of elementary hops with very little downhill reaction free energy.",
+          "source3": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5511282&rettype=xml",
+          "status": "verified", "accessed": "2026-09-02"
+        },
+        {
+          "claim": "FeS 簇电位可调范围 ~650 meV（取决于蛋白基质结合基序）——同构簇族可覆盖宽电位带",
+          "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5511282&rettype=xml",
+          "quote": "the pervasiveness of iron-sulfur clusters in energy chains can be credited to their ability to substantially vary their redox potential (in the range of 650 meV), and the corresponding ΔG0, depending on the binding motif to the protein matrix",
+          "status": "verified", "accessed": "2026-09-02"
+        }
+      ]
+    },
+
+    "complex_III_bc1": {
+      "sites": [
+        {
+          "site": "B3_QH2Qo_to_2Fe2S", "donor": "QH2 (Qo 位点泛醌醇)", "acceptor": "2Fe2S (Rieske 簇)",
+          "dG_eV": {"value": null, "status": "unverified", "note": "Qo 位点两支分叉的单步 ΔG° 未核到数值（Rieske Em 数值本次未核到，见待核验参考）"},
+          "lambda_eV": {"value": null, "status": "unverified"},
+          "k_s1": {"value": 1650, "range_note": "R. sphaeroides 色素载体 k3=1650 s⁻¹（限速步）；牛心 250 s⁻¹；P. denitrificans 700 s⁻¹", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3535674&rettype=xml", "quote": "k3 = 1650 s−1 for electron transfer from QH2 to 2Fe2S in the Qo site ... The rate constants for bovine cyt bc1 are k2 = 16,000 s−1 and k3 = 250 s−1, while for the P. denitrificans complex they are k2 = 10,700 s−1 and k3 = 700 s−1"},
+          "distance_A": {"value": null, "status": "unverified"},
+          "sources": ["https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3535674&rettype=xml"], "accessed": "2026-09-02"
+        },
+        {
+          "site": "B3_Qdot_to_bL", "donor": "Qo 半醌 Q•−", "acceptor": "heme bL",
+          "dG_eV": {"value": null, "status": "unverified"},
+          "lambda_eV": {"value": null, "status": "unverified"},
+          "k_s1": {"value": 1e9, "note": "k4 > 10^9 s⁻¹（下限）", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3535674&rettype=xml", "quote": "k4 > 10^9 s−1 for electron transfer from Q•− to heme bL in the Qo site"},
+          "distance_A": {"value": null, "status": "unverified"},
+          "sources": ["https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3535674&rettype=xml"], "accessed": "2026-09-02"
+        },
+        {
+          "site": "B3_bL_to_bH", "donor": "heme bL", "acceptor": "heme bH (跨膜两步)",
+          "dG_eV": {"value": null, "status": "unverified"},
+          "lambda_eV": {"value": null, "status": "unverified"},
+          "k_s1": {"value": 10000, "note": "半衰期 0.1 ms → k≈1e4 s⁻¹（Shinkarev 瞬态电场法）", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3535674&rettype=xml", "quote": "electron transfer between cyt bL and cyt bH has a half-time of 0.1 ms using the transient electric field"},
+          "distance_A": {"value": null, "status": "unverified", "note": "本次未核到 bL-bH 边到边距离数值"},
+          "sources": ["https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3535674&rettype=xml"], "accessed": "2026-09-02"
+        },
+        {
+          "site": "B3_2Fe2S_to_c1", "donor": "2Fe2S (Rieske)", "acceptor": "cyt c1",
+          "dG_eV": {"value": -0.02, "note": "pH 7.0 时 ΔG°' = −0.02 V；pH 升到 10.0（His-161 去质子化使 2Fe2S 电位降低）驱动力变为 +0.115 V——本站驱动力被 pH 精细调在近零", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3535674&rettype=xml", "quote": "The redox potential of 2Fe2S is decreased significantly as the pH is increased from pH 7.0 to pH 10.0 due to the deprotonation of the 2Fe2S ligand His-161, leading to an increase in the driving force ΔG°' from −0.02 V to +0.115 V"},
+          "lambda_eV": {"value": 1.0, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3535674&rettype=xml", "quote": "a value of 1.0 V is typical for cytochromes with a similar heme solvent exposure to that of cyt c1"},
+          "k_s1": {"value": 80000, "note": "R. sphaeroides Ru 光氧化法 WT pH8 k2=8.0e4 s⁻¹；色素载体下限 >1e5 s⁻¹；牛心 1.6e4；P.d. 1.07e4。关键：ISP 突变使 2Fe2S Em 降 62/109/159 mV，k2 却不变——本站被构象门控（Rieske 结构域 57° 转动）限速，非真 ET 限速", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3535674&rettype=xml", "quote2": "It was discovered that this reaction is rate-limited by the rotational dynamics of the iron-sulfur protein rather than true electron transfer"},
+          "distance_A": {"value": 9.9, "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3535674&rettype=xml", "quote2": "Theoretical rate constant ... calculated from equation 2 with r = 9.9 Å"},
+          "sources": ["https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3535674&rettype=xml"], "accessed": "2026-09-02"
+        },
+        {
+          "site": "B3_c1_to_cytC", "donor": "cyt c1", "acceptor": "cyt c2/c（可扩散载体）",
+          "dG_eV": {"value": null, "status": "unverified"},
+          "lambda_eV": {"value": null, "status": "unverified"},
+          "k_s1": {"value": 10000, "note": "色素载体 k1 > 10^4 s⁻¹（c1→Cc）；酵母 Ru 法 3900 s⁻¹", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3535674&rettype=xml", "quote": "k1 > 10^4 s−1 for electron transfer from cyt c1 to Cc ... followed by electron transfer from cyt c1 to oxidized heme c with a rate constant of 3900 s−1"},
+          "distance_A": {"value": null, "status": "unverified"},
+          "sources": ["https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3535674&rettype=xml"], "accessed": "2026-09-02"
+        }
+      ],
+      "complex_level_notes": [
+        {
+          "claim": "bc1 可逆性/防短路机制（Moser/Dutton/Osyczka Nature 2004）：毫秒级可逆性使半醜模型易短路，两个保险机制——半醌构象门控或协同双电子醌化学——把短路 relegated 到秒级长程隧穿",
+          "source": "https://europepmc.org/article/MED/14961113（Europe PMC REST 摘要，2026-09-02 实取）",
+          "quote": "Such rapid reversibility renders popular models based on a semiquinone in Q(o) site catalysis prone to short-circuit failure. Two mechanisms allow reversible function and safely relegate short-circuits to long-distance electron tunnelling on a timescale of seconds: conformational gating of semiquinone for both forward and reverse electron transfer, or concerted two-electron quinone redox chemistry that avoids the semiquinone intermediate altogether.",
+          "status": "verified", "accessed": "2026-09-02"
+        },
+        {
+          "claim": "b6f/bc1 对比实测（同一方法学）：b6f 两个 b 型血红素 Em = −80 mV（bp）与 −111 mV（bn），bc1 bl = −124 mV、bh 双组分 −30/+120 mV——b6f 跨膜 ET 出现『上坡步』（高电位→低电位），减慢低电位链",
+          "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=9720722&rettype=xml",
+          "quote": "Our systematic redox titration analysis ... revealed that Em of heme bn is unexpectedly low. Consequently, the cross-membrane ET occurs from the high- to low-potential heme introducing an uphill step in the energy landscape",
+          "status": "verified", "accessed": "2026-09-02"
+        }
+      ]
+    },
+
+    "complex_IV_cytC_oxidase": {
+      "em_table": {
+        "description": "Moser/Page/Dutton 2006（Phil Trans R Soc B）Table 1：CcO 辅因子中点电位估计（a/a3/CuB 为 Nicholls & Wrigglesworth 1988 平均；括号内为 mostly-oxidized 态上调估计）",
+        "values": {
+          "CuA": {"Em_V": 0.24, "source_note": "Moody & Rich (1990)"},
+          "haem_a": {"Em_V": 0.26},
+          "haem_a3_II_to_III": {"Em_V": 0.28, "oxidized_est": 0.32},
+          "haem_a3_III_to_IV": {"Em_V": 0.6},
+          "CuB": {"Em_V": 0.26, "oxidized_est": 0.32},
+          "Tyr_radical": {"Em_V": 1.0}
+        },
+        "O2_couples_solution_V": {"0_over_I": -0.33, "I_over_II": 0.94, "II_over_III": 0.305, "III_over_IV": 2.33},
+        "O2_levelling_100pct_V": 0.81,
+        "O2_levelling_5pct_V": {"0_over_I": -0.27, "I_over_II": 0.93, "II_over_III": 0.33, "III_over_IV": 2.25},
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/",
+        "status": "verified", "accessed": "2026-09-02",
+        "intercenter_interaction_note": "氧化还原中心间静电相互作用 ~35-40 mV（任一中心被还原使其余更难还原，Blair 1986）"
+      },
+      "sites": [
+        {
+          "site": "B4_cytC_to_CuA", "donor": "cyt c (Fe2+)", "acceptor": "CuA",
+          "dG_eV": {"value": null, "status": "unverified", "note": " cyt c→CuA 单步 ΔG° 未直接核到（CuA Em 0.24 V 已核；cyt c Em 未核）"},
+          "lambda_eV": {"value": null, "status": "unverified"},
+          "k_s1": {"value": 1e6, "note": "结合态 τ≈1 μs；遭遇复合物 τ≈100 μs（差 100 倍）；界面水氢键路径 β=1.1 Å⁻¹", "status": "verified", "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=15738426&rettype=abstract&retmode=text", "quote": "The ET rate determined for the encounter complex ensemble of states is only about a factor of 100 slower than that of the bound state (τ = 100 micros, compared with 1 micros) ... with a tunneling decay factor β = 1.1 A(-1)"},
+          "distance_A": {"value": null, "status": "unverified"},
+          "sources": ["https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=15738426&rettype=abstract&retmode=text"], "accessed": "2026-09-02"
+        },
+        {
+          "site": "B4_CuA_to_haem_a", "donor": "CuA", "acceptor": "haem a",
+          "dG_eV": {"value": -0.02, "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/", "quote": "Table 3 ... Cu A → a ... Δ G ° (eV) −0.02"},
+          "lambda_eV": {"value": 0.7, "note": "三个口径全核验：generic 0.7 eV（Moser/Dutton 主张，配合实测活化能 ~53-60 meV 自洽）；0.3 eV（Brzezinski 1996 温度依赖拟合，Moser 认为系经典 Marcus 误用）；0.09 eV（Winkler 1995，Moser 称 unprecedented、需再检）", "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/", "quote2": "This 0.3 eV value ... appears to be another example of the inappropriate application of temperature dependencies ... Table 3 records an even smaller reorganization energy of 0.09 eV (Winkler et al. 1995). This extremely low value is unprecedented to date"},
+          "k_s1": {"value": 2e4, "note": "实测 3.0e4 s⁻¹（Adelroth 1995；Table 3 记 2e4）；Moser 公式计算 3.0e3（λ=0.7，ρ=0.76）/ 8.7e4（ρ=0.87）", "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/"},
+          "distance_A": {"value": 16.1, "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/", "quote": "For the 16 Å electron transfer between the nearest copper of Cu A and edge of the conjugated ring of haem a"},
+          "sources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/"], "accessed": "2026-09-02"
+        },
+        {
+          "site": "B4_haem_a_to_a3", "donor": "haem a", "acceptor": "haem a3",
+          "dG_eV": {"value": -0.02, "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/", "quote": "a → a 3 ... Δ G ° (eV) −0.02"},
+          "lambda_eV": {"value": 0.7, "note": "同上三口径；另有路径模型拟合值 0.44 eV（Medvedev 2000）与文献值 0.76 eV（Adelroth 1995）", "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/"},
+          "k_s1": {"value": 7e8, "note": "本征隧穿计算 6.5e8 s⁻¹（λ=0.7）/1.4e9（ρ 口径）；pre-2001 实测 3e5 s⁻¹（慢 2000 倍，因耦合质子泵/催化位垒 ~0.2 eV）；post-2001 超快 CO 光解实测 7e8 s⁻¹（Pilet 2004，1.2 ns 平衡）——观测速率=本征隧穿×门控", "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/", "quote2": "Recently, ultrafast CO photolysis examination of the mixed valence state has uncovered a 1.2 ns electron equilibration between haems a and a3 (Pilet et al. 2004) in keeping with the expected tunnelling rates"},
+          "distance_A": {"value": 7.0, "note": "卟啉环边到边 6.9-7.0 Å", "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/"},
+          "sources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/"], "accessed": "2026-09-02"
+        },
+        {
+          "site": "B4_CuA_to_a3_shortcircuit", "donor": "CuA", "acceptor": "haem a3（生理短路通道）",
+          "dG_eV": {"value": -0.04, "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/"},
+          "lambda_eV": {"value": 0.7, "note": "计算用 0.7/0.5/0.8 三口径：90/40/0.17/250 s⁻¹", "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/"},
+          "k_s1": {"value": 4, "note": "实测 4 s⁻¹（Kannt 1999）——距离 18.9 Å + 簇还原位垒双重压制；论文称需额外压到 3% 产率以下以保质子泵不被短路", "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/", "quote2": "Electron transfer directly from Cu A to haem a 3 is often considered a physiological short circuit"},
+          "distance_A": {"value": 18.9, "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/"},
+          "sources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/"], "accessed": "2026-09-02"
+        },
+        {
+          "site": "B4_a3_CuB_to_O2", "donor": "haem a3/CuB/Tyr 双核簇", "acceptor": "O2/H2O",
+          "dG_eV": {"value": null, "status": "unverified", "note": "单步 ΔG° 依赖微态；O2 四个单电子偶溶液值 −0.33/0.94/0.305/2.33 V，100% 拉平后全部 0.81 V，5% 拉平 −0.27/0.93/0.33/2.25 V（verified，Table 2）"},
+          "lambda_eV": {"value": null, "status": "unverified"},
+          "k_s1": {"value": 3.3e4, "note": "O2 还原特征时间 30 μs（→3.3e4 s⁻¹）；质子泵耦合位垒估计 ~0.2 eV（6 kcal/mol）使 a→a3 表观速率从 6.5e8 降到 3e5", "status": "verified", "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/", "quote2": "the 30 μs characteristic time of O 2 reduction at the haem a 3 /Cu B binuclear centre"},
+          "distance_A": {"value": null, "status": "unverified", "note": "催化簇内距离：haem a 6.9 Å、Tyr 4.9 Å（到簇，verified）"},
+          "sources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/"], "accessed": "2026-09-02"
+        }
+      ],
+      "complex_level_notes": [
+        {
+          "claim": "CcO 设计原理（Moser/Dutton）：CuA→a 而非 CuA→a3 的方向性由距离+位垒选择实现，无需『硬接线』蛋白介质",
+          "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1647310/",
+          "quote": "The selection of distances and energetic barriers directs electron transfer from Cu A to haem a rather than a 3, without any need for delicate engineering of the protein medium to 'hard wire' electron transfer.",
+          "status": "verified", "accessed": "2026-09-02"
+        }
+      ]
+    },
+
+    "cross_complex_waste_mechanism": {
+      "electron_bifurcation_PNAS2020": {
+        "claim": "『能量浪费/短路』问题的普适答案（电子分岔）：自然系统用『陡自由能坡 + 电子占据阻塞（occupancy blockade）』绝缘大驱动力短路反应，不依赖微观速率常数的精细调谐",
+        "quote": "For decades, it was unknown how electron-bifurcating systems in nature prevented energy-wasting short-circuiting reactions that have large driving forces ... The landscape relies on steep free-energy slopes in the two redox branches to insulate against short-circuiting using an electron occupancy blockade effect, without relying on nuanced changes in the microscopic rate constants for the short-circuiting reactions.",
+        "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=32801212&rettype=abstract&retmode=text",
+        "status": "verified", "accessed": "2026-09-02"
+      },
+      "PS_CI_N2_sink": {
+        "claim": "PS-CI 末端 N2 作电子阱（电位最正），阻止反向电子流经还原态黄素生成超氧——高电位差站的功能是防浪费而非浪费",
+        "quote": "cluster N2 is therefore postulated to act as an electron sink and may avert reverse electron transfer under physiological conditions, preventing backflow to O2 that would generate dangerous superoxide radicals via the reduced flavin",
+        "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8433477&rettype=xml",
+        "status": "verified", "accessed": "2026-09-02"
+      }
+    }
+  },
+
+  "unverified_reference_values": {
+    "note": "以下为任务书/常识中的经典数值，本次开放获取通道未核到原文，仅供下一步定向核验，禁止当核验值引用",
+    "items": [
+      {"value": "NADH/NAD+ Em ≈ −320 mV", "status": "unverified", "note": "任务书口径；本次未访问到含该数值的一手/权威开放文本"},
+      {"value": "Q 池（泛醌/泛醇）Em ≈ +90 mV（线粒体）", "status": "unverified", "note": "PS-CI 的 PQ 池 +80 mV 已核（Nature Comm 2021）；线粒体 +90 mV 未核"},
+      {"value": "Rieske 2Fe2S Em ≈ +280~310 mV", "status": "unverified", "note": "本次只核到 Rieske 电位相对变化（−62/−109/−159 mV 突变位移、pH7→10 位移）与『raised midpoint potential』定性表述"},
+      {"value": "cyt c1 Em ≈ +220 mV", "status": "unverified"},
+      {"value": "cyt c（马心/线粒体）Em ≈ +230~250 mV", "status": "unverified"},
+      {"value": "heme bL ≈ +90 mV / bH ≈ +50~120 mV（教科书值）", "status": "unverified", "note": "注意：b6f/bc1 对比论文（2022）用 9K 光谱+滴定给 bc1 bl=−124 mV、bh=−30/+120 mV，与教科书值有张力，引用需注明方法学"},
+      {"value": "P/P+ Em(P870) ≈ +500 mV", "status": "verified_note", "note": "505 mV 已由 Venturoli 1998 摘要核验（与常识一致）"},
+      {"value": "Bphe Em ≈ −550 mV；QA Em ≈ −100~−150 mV；QB Em ≈ +90~120 mV", "status": "unverified", "note": "单值未核；P+QA− 相对 P* 的 −910±20 meV 已核（延迟荧光）"}
+    ]
+  },
+
+  "channel_failures": [
+    "Europe PMC fullTextXML 端点间歇性失败（空响应/504/SSL EOF）：PMC2984193、PMC1647310 XML 版多次重试失败，改走 pmc.ncbi.nlm.nih.gov 网页 HTML 成功（Darwin 论文）",
+    "royalsocietypublishing.org 被 Cloudflare 盾拦截（'Just a moment...'），改走 PMC 镜像",
+    "NCBI pmc/utils/oa/oa.fcgi 返回 404（端点迁移）",
+    "NCBI efetch 对非 OA 文章只回元数据（BJ 2000、PNAS 1989、EMBO 1989 Nobel lecture 等）",
+    "Europe PMC FT 全文检索对多词组合查询频繁 0 hits/超时（504），需多次退避重试",
+    "Hayashi & Stuchebrukhov PNAS 2010（PMC2984193）全文 XML 未能取得，改用其 JPCB 2011 姊妹篇（PMC4230448，全文取得，Table 1 完整）"
+  ]
+}

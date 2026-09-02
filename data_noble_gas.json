@@ -1,0 +1,92 @@
+{
+ "He": {
+  "symbol": "He",
+  "Z": 2,
+  "ionization_energy_eV": 24.587389011,
+  "ie_source": "https://physics.nist.gov/cgi-bin/ASD/ie.pl (NIST ASD, eV, accessed 2026-09-02; raw TSV archived as nist_ie_*.tsv)",
+  "successive_ie_eV": [
+   24.587389011
+  ],
+  "reactivity_facts": [
+   "No neutral covalent compound isolated in bulk; only endohedral complexes He@C60 (Saunders et al., Science 259:1428, 1993) and ions like HeH+ observed; Na2He high-pressure phase confirmed (2017)",
+   "Classified 'very unreactive' group (IE 24.6 eV)"
+  ],
+  "reactivity_source": "https://en.wikipedia.org/wiki/Noble_gas_compound (accessed 2026-09-02 via api.wikimedia.org)"
+ },
+ "Ne": {
+  "symbol": "Ne",
+  "Z": 10,
+  "ionization_energy_eV": 21.564541,
+  "ie_source": "https://physics.nist.gov/cgi-bin/ASD/ie.pl (NIST ASD, eV, accessed 2026-09-02; raw TSV archived as nist_ie_*.tsv)",
+  "successive_ie_eV": [
+   21.564541
+  ],
+  "reactivity_facts": [
+   "No stable neutral/covalent neon compounds known under any pressure or temperature (Lewars, Modelling Marvels, Springer 2008, pp.70-71); [B12(CN)11Ne]- predicted (RSC Chem. Commun. 2020) but not confirmed - Neon is the only noble gas with no definitively confirmed compound",
+   "Classified 'very unreactive' group (IE 21.6 eV)"
+  ],
+  "reactivity_source": "https://en.wikipedia.org/wiki/Neon (accessed 2026-09-02 via api.wikimedia.org)"
+ },
+ "Ar": {
+  "symbol": "Ar",
+  "Z": 18,
+  "ionization_energy_eV": 15.7596119,
+  "ie_source": "https://physics.nist.gov/cgi-bin/ASD/ie.pl (NIST ASD, eV, accessed 2026-09-02; raw TSV archived as nist_ie_*.tsv)",
+  "successive_ie_eV": [
+   15.7596119
+  ],
+  "reactivity_facts": [
+   "Chemically inert under most conditions; forms no confirmed stable compounds at room temperature (Argon page)",
+   "HArF (argon fluorohydride) synthesized in low-temperature matrix, announced 2000 (Khriachtchev et al., Nature 406:874, doi:10.1038/35022551) - stable only in cryogenic matrices",
+   "Classified 'very unreactive' group (IE 15.8 eV)"
+  ],
+  "reactivity_source": "https://en.wikipedia.org/wiki/Argon + https://en.wikipedia.org/wiki/Noble_gas_compound (accessed 2026-09-02 via api.wikimedia.org)"
+ },
+ "Kr": {
+  "symbol": "Kr",
+  "Z": 36,
+  "ionization_energy_eV": 13.999604,
+  "ie_source": "https://physics.nist.gov/cgi-bin/ASD/ie.pl (NIST ASD, eV, accessed 2026-09-02; raw TSV archived as nist_ie_*.tsv)",
+  "successive_ie_eV": [
+   13.999604
+  ],
+  "reactivity_facts": [
+   "KrF2 (krypton difluoride) first krypton compound, reported 1963 (Grosse et al., Science 139:1047); synthesized from Kr + F2 under extreme forcing conditions (electric discharge/low temperature photolysis)",
+   "KrF2 crystal structure determined (Burbank et al., Science 178:1285, 1972); decomposes at ~-20C or below 0C depending on source - thermodynamically unstable",
+   "Classified 'relatively reactive' group (IE 14.0 eV)"
+  ],
+  "reactivity_source": "https://en.wikipedia.org/wiki/Krypton_difluoride + https://en.wikipedia.org/wiki/Noble_gas_compound (accessed 2026-09-02 via api.wikimedia.org)"
+ },
+ "Xe": {
+  "symbol": "Xe",
+  "Z": 54,
+  "ionization_energy_eV": 12.1298437,
+  "ie_source": "https://physics.nist.gov/cgi-bin/ASD/ie.pl (NIST ASD, eV, accessed 2026-09-02; raw TSV archived as nist_ie_*.tsv)",
+  "successive_ie_eV": [
+   12.1298437
+  ],
+  "reactivity_facts": [
+   "XeF2: photochemical synthesis Xe + F2 under UV (Weeks, Chernick, Matheson, JACS 84:4612, 1962)",
+   "XeF4: first binary noble-gas compound via Xe+F2 at high temperature (Claassen, Selig, Malm, JACS 84:3593, 1962)",
+   "XeF6: from XeF2 heating with NiF2 catalyst (Tramsek & Zemva 2006)",
+   "First noble gas compound: Xe+[PtF6]- (Bartlett, Proc. Chem. Soc. 1962), triggered by IE(Xe)=1170 kJ/mol ~ IE(O2)=1165 kJ/mol",
+   "Also XeO3, XeO4, XeO2 known; classified 'relatively reactive' group (IE 12.1 eV)"
+  ],
+  "reactivity_source": "https://en.wikipedia.org/wiki/Xenon + https://en.wikipedia.org/wiki/Noble_gas_compound (accessed 2026-09-02 via api.wikimedia.org)"
+ },
+ "Rn": {
+  "symbol": "Rn",
+  "Z": 86,
+  "ionization_energy_eV": 10.7485,
+  "ie_source": "https://physics.nist.gov/cgi-bin/ASD/ie.pl (NIST ASD, eV, accessed 2026-09-02; raw TSV archived as nist_ie_*.tsv)",
+  "successive_ie_eV": [
+   10.7485
+  ],
+  "reactivity_facts": [
+   "RnF2 (radon difluoride) formed by oxidation with F2; also [RnF]+[Sb2F11]- from Rn + [O2]+[SbF6]-; RnO3 reported (Stein 1983/2010 studies)",
+   "Not chemically inert, but 3.8 d half-life of 222Rn makes chemistry difficult; reactivity inferred and only a few compounds reported (all fluorides/oxides)",
+   "Classified 'relatively reactive' group (IE 10.7 eV); predicted most metallic noble gas"
+  ],
+  "reactivity_source": "https://en.wikipedia.org/wiki/Radon + https://en.wikipedia.org/wiki/Radon_compounds + Noble_gas_compound (accessed 2026-09-02 via api.wikimedia.org)"
+ }
+}

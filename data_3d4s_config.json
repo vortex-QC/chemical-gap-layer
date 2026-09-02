@@ -1,0 +1,1022 @@
+{
+ "_meta": {
+  "title": "过渡金属 Sc-Zn 逐级电离的 3d/4s 剥离配属（光谱精细项级）",
+  "date_accessed": "2026-09-02",
+  "method": "NIST ASD ie.pl 重抓（勾选 conf_out+ion_conf_out，比 data_ionization.json 原抓多 Ground Config. 与 Ionized Level 两列）。第 k 级电离后组态 = 电荷 +k 离子的基态组态（NIST Ground Shells 列）；剥离电子归属由电荷 k-1 与 k 基组态差分推得；NIST Ionized Level 谱项列作独立旁证。未编造任何数值，IE 与组态均逐字符来自 TSV。",
+  "known_pattern_check": "『4s 先剥』在剥离动作层面十元素全部成立（4s 占据时先失去 4s 电子）；但有 3 个组态层反例：V⁺/Co⁺/Ni⁺ 基组态为 3d(n+1)，即 IE1 剥 4s 的同时剩余 4s 电子弛豫入 3d——按『电离后组态』字面看 3d 电子数不降反升。Fe³⁺→Fe⁴⁺ 无交叉（4s 已空，纯 3d 链）。",
+  "note_on_shells_after_removal_in_data_ionization": "data_ionization.json 里的 shells_after_removal 字段实为 NIST 'Ground Shells'（剥前组态，逐行对应被电离离子），字段名有误导性；本文件予以澄清并给出真正的电离后组态。"
+ },
+ "Sc": {
+  "Z": 21,
+  "剥离序列_IE1-5": [
+   "4s",
+   "4s",
+   "3d",
+   "3p",
+   "3p"
+  ],
+  "电离后组态_IE1-5": [
+   "[Ar].3d.4s",
+   "[Ar].3d",
+   "[Ne].3s2.3p6",
+   "[Ne].3s2.3p5",
+   "[Ne].3s2.3p4"
+  ],
+  "IE_eV_IE1-5": [
+   "",
+   "",
+   "",
+   "",
+   "["
+  ],
+  "逐级明细_IE1-8": [
+   {
+    "stage": 1,
+    "IE_eV": "",
+    "unc_eV": "0.00006",
+    "剥离前组态_电荷0": "[Ar].3d.4s2",
+    "电离后组态_电荷1": "[Ar].3d.4s",
+    "NIST电离谱项_IonizedLevel": "3d.4s 3D<1>",
+    "剥离归属": "4s"
+   },
+   {
+    "stage": 2,
+    "IE_eV": "",
+    "unc_eV": "0.00025",
+    "剥离前组态_电荷1": "[Ar].3d.4s",
+    "电离后组态_电荷2": "[Ar].3d",
+    "NIST电离谱项_IonizedLevel": "3d 2D<3/2>",
+    "剥离归属": "4s"
+   },
+   {
+    "stage": 3,
+    "IE_eV": "",
+    "unc_eV": "0.000012",
+    "剥离前组态_电荷2": "[Ar].3d",
+    "电离后组态_电荷3": "[Ne].3s2.3p6",
+    "NIST电离谱项_IonizedLevel": "3p6 1S<0>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 4,
+    "IE_eV": "",
+    "unc_eV": "0.0004",
+    "剥离前组态_电荷3": "[Ne].3s2.3p6",
+    "电离后组态_电荷4": "[Ne].3s2.3p5",
+    "NIST电离谱项_IonizedLevel": "3p5 2P*<3/2>",
+    "剥离归属": "3p"
+   },
+   {
+    "stage": 5,
+    "IE_eV": "[",
+    "unc_eV": "0.03",
+    "剥离前组态_电荷4": "[Ne].3s2.3p5",
+    "电离后组态_电荷5": "[Ne].3s2.3p4",
+    "NIST电离谱项_IonizedLevel": "3p4 3P<2>",
+    "剥离归属": "3p"
+   },
+   {
+    "stage": 6,
+    "IE_eV": "[",
+    "unc_eV": "0.05",
+    "剥离前组态_电荷5": "[Ne].3s2.3p4",
+    "电离后组态_电荷6": "[Ne].3s2.3p3",
+    "NIST电离谱项_IonizedLevel": "3p3 4S*<3/2>",
+    "剥离归属": "3p"
+   },
+   {
+    "stage": 7,
+    "IE_eV": "[",
+    "unc_eV": "0.25",
+    "剥离前组态_电荷6": "[Ne].3s2.3p3",
+    "电离后组态_电荷7": "[Ne].3s2.3p2",
+    "NIST电离谱项_IonizedLevel": "3p2 3P<0>",
+    "剥离归属": "3p"
+   },
+   {
+    "stage": 8,
+    "IE_eV": "[",
+    "unc_eV": "0.25",
+    "剥离前组态_电荷7": "[Ne].3s2.3p2",
+    "电离后组态_电荷8": "[Ne].3s2.3p",
+    "NIST电离谱项_IonizedLevel": "3p 2P*<1/2>",
+    "剥离归属": "3s/inner"
+   }
+  ],
+  "source": "NIST Atomic Spectra Database, Ionization Energies (ie.pl), TSV 输出含 Ground Shells/Ground Config./Ionized Level 列; https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Sc-Zn&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&conf_out=on&ion_conf_out=on&level_out=on&e_out=0&unc_out=on&submit=Retrieve+Data",
+  "accessed": "2026-09-02",
+  "status": "NIST ASD 直连核验（本任务重抓，TSV 原件 /tmp/nist_ie_Sc_Zn_v2.tsv）"
+ },
+ "Ti": {
+  "Z": 22,
+  "剥离序列_IE1-5": [
+   "4s",
+   "4s",
+   "3d",
+   "3d",
+   "3p"
+  ],
+  "电离后组态_IE1-5": [
+   "[Ar].3d2.4s",
+   "[Ar].3d2",
+   "[Ar].3d",
+   "[Ne].3s2.3p6",
+   "[Ne].3s2.3p5"
+  ],
+  "IE_eV_IE1-5": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "逐级明细_IE1-8": [
+   {
+    "stage": 1,
+    "IE_eV": "",
+    "unc_eV": "0.000012",
+    "剥离前组态_电荷0": "[Ar].3d2.4s2",
+    "电离后组态_电荷1": "[Ar].3d2.4s",
+    "NIST电离谱项_IonizedLevel": "3d2.4s 4F<3/2>",
+    "剥离归属": "4s"
+   },
+   {
+    "stage": 2,
+    "IE_eV": "",
+    "unc_eV": "0.0025",
+    "剥离前组态_电荷1": "[Ar].3d2.4s",
+    "电离后组态_电荷2": "[Ar].3d2",
+    "NIST电离谱项_IonizedLevel": "3d2 3F<2>",
+    "剥离归属": "4s"
+   },
+   {
+    "stage": 3,
+    "IE_eV": "",
+    "unc_eV": "0.00025",
+    "剥离前组态_电荷2": "[Ar].3d2",
+    "电离后组态_电荷3": "[Ar].3d",
+    "NIST电离谱项_IonizedLevel": "3d 2D<3/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 4,
+    "IE_eV": "",
+    "unc_eV": "0.00019",
+    "剥离前组态_电荷3": "[Ar].3d",
+    "电离后组态_电荷4": "[Ne].3s2.3p6",
+    "NIST电离谱项_IonizedLevel": "3p6 1S<0>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 5,
+    "IE_eV": "",
+    "unc_eV": "0.012",
+    "剥离前组态_电荷4": "[Ne].3s2.3p6",
+    "电离后组态_电荷5": "[Ne].3s2.3p5",
+    "NIST电离谱项_IonizedLevel": "3p5 2P*<3/2>",
+    "剥离归属": "3p"
+   },
+   {
+    "stage": 6,
+    "IE_eV": "[",
+    "unc_eV": "0.025",
+    "剥离前组态_电荷5": "[Ne].3s2.3p5",
+    "电离后组态_电荷6": "[Ne].3s2.3p4",
+    "NIST电离谱项_IonizedLevel": "3p4 3P<2>",
+    "剥离归属": "3p"
+   },
+   {
+    "stage": 7,
+    "IE_eV": "[",
+    "unc_eV": "0.18",
+    "剥离前组态_电荷6": "[Ne].3s2.3p4",
+    "电离后组态_电荷7": "[Ne].3s2.3p3",
+    "NIST电离谱项_IonizedLevel": "3p3 4S*<3/2>",
+    "剥离归属": "3p"
+   },
+   {
+    "stage": 8,
+    "IE_eV": "[",
+    "unc_eV": "0.4",
+    "剥离前组态_电荷7": "[Ne].3s2.3p3",
+    "电离后组态_电荷8": "[Ne].3s2.3p2",
+    "NIST电离谱项_IonizedLevel": "3p2 3P<0>",
+    "剥离归属": "3p"
+   }
+  ],
+  "source": "NIST Atomic Spectra Database, Ionization Energies (ie.pl), TSV 输出含 Ground Shells/Ground Config./Ionized Level 列; https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Sc-Zn&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&conf_out=on&ion_conf_out=on&level_out=on&e_out=0&unc_out=on&submit=Retrieve+Data",
+  "accessed": "2026-09-02",
+  "status": "NIST ASD 直连核验（本任务重抓，TSV 原件 /tmp/nist_ie_Sc_Zn_v2.tsv）"
+ },
+ "V": {
+  "Z": 23,
+  "剥离序列_IE1-5": [
+   "4s(余下4s弛豫入3d)",
+   "3d",
+   "3d",
+   "3d",
+   "3d"
+  ],
+  "电离后组态_IE1-5": [
+   "[Ar].3d4",
+   "[Ar].3d3",
+   "[Ar].3d2",
+   "[Ar].3d",
+   "[Ne].3s2.3p6"
+  ],
+  "IE_eV_IE1-5": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "逐级明细_IE1-8": [
+   {
+    "stage": 1,
+    "IE_eV": "",
+    "unc_eV": "0.000021",
+    "剥离前组态_电荷0": "[Ar].3d3.4s2",
+    "电离后组态_电荷1": "[Ar].3d4",
+    "NIST电离谱项_IonizedLevel": "3d4 5D<0>",
+    "剥离归属": "4s(余下4s弛豫入3d)"
+   },
+   {
+    "stage": 2,
+    "IE_eV": "",
+    "unc_eV": "0.007",
+    "剥离前组态_电荷1": "[Ar].3d4",
+    "电离后组态_电荷2": "[Ar].3d3",
+    "NIST电离谱项_IonizedLevel": "3d3 4F<3/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 3,
+    "IE_eV": "",
+    "unc_eV": "0.0025",
+    "剥离前组态_电荷2": "[Ar].3d3",
+    "电离后组态_电荷3": "[Ar].3d2",
+    "NIST电离谱项_IonizedLevel": "3d2 3F<2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 4,
+    "IE_eV": "",
+    "unc_eV": "0.005",
+    "剥离前组态_电荷3": "[Ar].3d2",
+    "电离后组态_电荷4": "[Ar].3d",
+    "NIST电离谱项_IonizedLevel": "3d 2D<3/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 5,
+    "IE_eV": "",
+    "unc_eV": "0.00017",
+    "剥离前组态_电荷4": "[Ar].3d",
+    "电离后组态_电荷5": "[Ne].3s2.3p6",
+    "NIST电离谱项_IonizedLevel": "3p6 1S<0>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 6,
+    "IE_eV": "",
+    "unc_eV": "0.025",
+    "剥离前组态_电荷5": "[Ne].3s2.3p6",
+    "电离后组态_电荷6": "[Ne].3s2.3p5",
+    "NIST电离谱项_IonizedLevel": "3p5 2P*<3/2>",
+    "剥离归属": "3p"
+   },
+   {
+    "stage": 7,
+    "IE_eV": "[",
+    "unc_eV": "0.13",
+    "剥离前组态_电荷6": "[Ne].3s2.3p5",
+    "电离后组态_电荷7": "[Ne].3s2.3p4",
+    "NIST电离谱项_IonizedLevel": "3p4 3P<2>",
+    "剥离归属": "3p"
+   },
+   {
+    "stage": 8,
+    "IE_eV": "[",
+    "unc_eV": "0.21",
+    "剥离前组态_电荷7": "[Ne].3s2.3p4",
+    "电离后组态_电荷8": "[Ne].3s2.3p3",
+    "NIST电离谱项_IonizedLevel": "3p3 4S*<3/2>",
+    "剥离归属": "3p"
+   }
+  ],
+  "source": "NIST Atomic Spectra Database, Ionization Energies (ie.pl), TSV 输出含 Ground Shells/Ground Config./Ionized Level 列; https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Sc-Zn&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&conf_out=on&ion_conf_out=on&level_out=on&e_out=0&unc_out=on&submit=Retrieve+Data",
+  "accessed": "2026-09-02",
+  "status": "NIST ASD 直连核验（本任务重抓，TSV 原件 /tmp/nist_ie_Sc_Zn_v2.tsv）",
+  "anomaly_note": "IE1 特例：V⁺ 基组态为 3d4（非 3d3.4s）——剥离 4s 电子后剩余 4s 弛豫入 3d（NIST Ionized Level=3d4 5D<0> 旁证）"
+ },
+ "Cr": {
+  "Z": 24,
+  "剥离序列_IE1-5": [
+   "4s",
+   "3d",
+   "3d",
+   "3d",
+   "3d"
+  ],
+  "电离后组态_IE1-5": [
+   "[Ar].3d5",
+   "[Ar].3d4",
+   "[Ar].3d3",
+   "[Ar].3d2",
+   "[Ar].3d"
+  ],
+  "IE_eV_IE1-5": [
+   "",
+   "",
+   "",
+   "[",
+   "["
+  ],
+  "逐级明细_IE1-8": [
+   {
+    "stage": 1,
+    "IE_eV": "",
+    "unc_eV": "0.00004",
+    "剥离前组态_电荷0": "[Ar].3d5.4s",
+    "电离后组态_电荷1": "[Ar].3d5",
+    "NIST电离谱项_IonizedLevel": "3d5 6S<5/2>",
+    "剥离归属": "4s"
+   },
+   {
+    "stage": 2,
+    "IE_eV": "",
+    "unc_eV": "0.000015",
+    "剥离前组态_电荷1": "[Ar].3d5",
+    "电离后组态_电荷2": "[Ar].3d4",
+    "NIST电离谱项_IonizedLevel": "3d4 5D<0>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 3,
+    "IE_eV": "",
+    "unc_eV": "0.025",
+    "剥离前组态_电荷2": "[Ar].3d4",
+    "电离后组态_电荷3": "[Ar].3d3",
+    "NIST电离谱项_IonizedLevel": "3d3 4F<3/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 4,
+    "IE_eV": "[",
+    "unc_eV": "0.05",
+    "剥离前组态_电荷3": "[Ar].3d3",
+    "电离后组态_电荷4": "[Ar].3d2",
+    "NIST电离谱项_IonizedLevel": "3d2 3F<2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 5,
+    "IE_eV": "[",
+    "unc_eV": "0.04",
+    "剥离前组态_电荷4": "[Ar].3d2",
+    "电离后组态_电荷5": "[Ar].3d",
+    "NIST电离谱项_IonizedLevel": "3d 2D<3/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 6,
+    "IE_eV": "",
+    "unc_eV": "0.0007",
+    "剥离前组态_电荷5": "[Ar].3d",
+    "电离后组态_电荷6": "[Ne].3s2.3p6",
+    "NIST电离谱项_IonizedLevel": "3p6 1S<0>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 7,
+    "IE_eV": "[",
+    "unc_eV": "0.06",
+    "剥离前组态_电荷6": "[Ne].3s2.3p6",
+    "电离后组态_电荷7": "[Ne].3s2.3p5",
+    "NIST电离谱项_IonizedLevel": "3p5 2P*<3/2>",
+    "剥离归属": "3p"
+   },
+   {
+    "stage": 8,
+    "IE_eV": "[",
+    "unc_eV": "0.15",
+    "剥离前组态_电荷7": "[Ne].3s2.3p5",
+    "电离后组态_电荷8": "[Ne].3s2.3p4",
+    "NIST电离谱项_IonizedLevel": "3p4 3P<2>",
+    "剥离归属": "3p"
+   }
+  ],
+  "source": "NIST Atomic Spectra Database, Ionization Energies (ie.pl), TSV 输出含 Ground Shells/Ground Config./Ionized Level 列; https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Sc-Zn&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&conf_out=on&ion_conf_out=on&level_out=on&e_out=0&unc_out=on&submit=Retrieve+Data",
+  "accessed": "2026-09-02",
+  "status": "NIST ASD 直连核验（本任务重抓，TSV 原件 /tmp/nist_ie_Sc_Zn_v2.tsv）"
+ },
+ "Mn": {
+  "Z": 25,
+  "剥离序列_IE1-5": [
+   "4s",
+   "4s",
+   "3d",
+   "3d",
+   "3d"
+  ],
+  "电离后组态_IE1-5": [
+   "[Ar].3d5.4s",
+   "[Ar].3d5",
+   "[Ar].3d4",
+   "[Ar].3d3",
+   "[Ar].3d2"
+  ],
+  "IE_eV_IE1-5": [
+   "",
+   "",
+   "",
+   "[",
+   "["
+  ],
+  "逐级明细_IE1-8": [
+   {
+    "stage": 1,
+    "IE_eV": "",
+    "unc_eV": "0.0000012",
+    "剥离前组态_电荷0": "[Ar].3d5.4s2",
+    "电离后组态_电荷1": "[Ar].3d5.4s",
+    "NIST电离谱项_IonizedLevel": "3d5.4s 7S<3>",
+    "剥离归属": "4s"
+   },
+   {
+    "stage": 2,
+    "IE_eV": "",
+    "unc_eV": "0.00007",
+    "剥离前组态_电荷1": "[Ar].3d5.4s",
+    "电离后组态_电荷2": "[Ar].3d5",
+    "NIST电离谱项_IonizedLevel": "3d5 6S<5/2>",
+    "剥离归属": "4s"
+   },
+   {
+    "stage": 3,
+    "IE_eV": "",
+    "unc_eV": "0.012",
+    "剥离前组态_电荷2": "[Ar].3d5",
+    "电离后组态_电荷3": "[Ar].3d4",
+    "NIST电离谱项_IonizedLevel": "3d4 5D<0>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 4,
+    "IE_eV": "[",
+    "unc_eV": "0.12",
+    "剥离前组态_电荷3": "[Ar].3d4",
+    "电离后组态_电荷4": "[Ar].3d3",
+    "NIST电离谱项_IonizedLevel": "3d3 4F<3/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 5,
+    "IE_eV": "[",
+    "unc_eV": "0.10",
+    "剥离前组态_电荷4": "[Ar].3d3",
+    "电离后组态_电荷5": "[Ar].3d2",
+    "NIST电离谱项_IonizedLevel": "3d2 3F<2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 6,
+    "IE_eV": "",
+    "unc_eV": "0.025",
+    "剥离前组态_电荷5": "[Ar].3d2",
+    "电离后组态_电荷6": "[Ar].3d",
+    "NIST电离谱项_IonizedLevel": "3d 2D<3/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 7,
+    "IE_eV": "",
+    "unc_eV": "0.012",
+    "剥离前组态_电荷6": "[Ar].3d",
+    "电离后组态_电荷7": "[Ne].3s2.3p6",
+    "NIST电离谱项_IonizedLevel": "3p6 1S<0>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 8,
+    "IE_eV": "[",
+    "unc_eV": "0.3",
+    "剥离前组态_电荷7": "[Ne].3s2.3p6",
+    "电离后组态_电荷8": "[Ne].3s2.3p5",
+    "NIST电离谱项_IonizedLevel": "3p5 2P*<3/2>",
+    "剥离归属": "3p"
+   }
+  ],
+  "source": "NIST Atomic Spectra Database, Ionization Energies (ie.pl), TSV 输出含 Ground Shells/Ground Config./Ionized Level 列; https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Sc-Zn&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&conf_out=on&ion_conf_out=on&level_out=on&e_out=0&unc_out=on&submit=Retrieve+Data",
+  "accessed": "2026-09-02",
+  "status": "NIST ASD 直连核验（本任务重抓，TSV 原件 /tmp/nist_ie_Sc_Zn_v2.tsv）"
+ },
+ "Fe": {
+  "Z": 26,
+  "剥离序列_IE1-5": [
+   "4s",
+   "4s",
+   "3d",
+   "3d",
+   "3d"
+  ],
+  "电离后组态_IE1-5": [
+   "[Ar].3d6.4s",
+   "[Ar].3d6",
+   "[Ar].3d5",
+   "[Ar].3d4",
+   "[Ar].3d3"
+  ],
+  "IE_eV_IE1-5": [
+   "",
+   "",
+   "",
+   "",
+   "["
+  ],
+  "逐级明细_IE1-8": [
+   {
+    "stage": 1,
+    "IE_eV": "",
+    "unc_eV": "0.0000012",
+    "剥离前组态_电荷0": "[Ar].3d6.4s2",
+    "电离后组态_电荷1": "[Ar].3d6.4s",
+    "NIST电离谱项_IonizedLevel": "3d6.4s 6D<9/2>",
+    "剥离归属": "4s"
+   },
+   {
+    "stage": 2,
+    "IE_eV": "",
+    "unc_eV": "0.00005",
+    "剥离前组态_电荷1": "[Ar].3d6.4s",
+    "电离后组态_电荷2": "[Ar].3d6",
+    "NIST电离谱项_IonizedLevel": "3d6 5D<4>",
+    "剥离归属": "4s"
+   },
+   {
+    "stage": 3,
+    "IE_eV": "",
+    "unc_eV": "0.012",
+    "剥离前组态_电荷2": "[Ar].3d6",
+    "电离后组态_电荷3": "[Ar].3d5",
+    "NIST电离谱项_IonizedLevel": "3d5 6S<5/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 4,
+    "IE_eV": "",
+    "unc_eV": "0.04",
+    "剥离前组态_电荷3": "[Ar].3d5",
+    "电离后组态_电荷4": "[Ar].3d4",
+    "NIST电离谱项_IonizedLevel": "3d4 5D<0>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 5,
+    "IE_eV": "[",
+    "unc_eV": "0.15",
+    "剥离前组态_电荷4": "[Ar].3d4",
+    "电离后组态_电荷5": "[Ar].3d3",
+    "NIST电离谱项_IonizedLevel": "3d3 4F<3/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 6,
+    "IE_eV": "",
+    "unc_eV": "0.015",
+    "剥离前组态_电荷5": "[Ar].3d3",
+    "电离后组态_电荷6": "[Ar].3d2",
+    "NIST电离谱项_IonizedLevel": "3d2 3F<2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 7,
+    "IE_eV": "",
+    "unc_eV": "0.0025",
+    "剥离前组态_电荷6": "[Ar].3d2",
+    "电离后组态_电荷7": "[Ar].3d",
+    "NIST电离谱项_IonizedLevel": "3p6.3d 2D<3/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 8,
+    "IE_eV": "",
+    "unc_eV": "0.012",
+    "剥离前组态_电荷7": "[Ar].3d",
+    "电离后组态_电荷8": "[Ne].3s2.3p6",
+    "NIST电离谱项_IonizedLevel": "3p6 1S<0>",
+    "剥离归属": "3d"
+   }
+  ],
+  "source": "NIST Atomic Spectra Database, Ionization Energies (ie.pl), TSV 输出含 Ground Shells/Ground Config./Ionized Level 列; https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Sc-Zn&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&conf_out=on&ion_conf_out=on&level_out=on&e_out=0&unc_out=on&submit=Retrieve+Data",
+  "accessed": "2026-09-02",
+  "status": "NIST ASD 直连核验（本任务重抓，TSV 原件 /tmp/nist_ie_Sc_Zn_v2.tsv）"
+ },
+ "Co": {
+  "Z": 27,
+  "剥离序列_IE1-5": [
+   "4s(余下4s弛豫入3d)",
+   "3d",
+   "3d",
+   "3d",
+   "3d"
+  ],
+  "电离后组态_IE1-5": [
+   "[Ar].3d8",
+   "[Ar].3d7",
+   "[Ar].3d6",
+   "[Ar].3d5",
+   "[Ar].3d4"
+  ],
+  "IE_eV_IE1-5": [
+   "",
+   "",
+   "[",
+   "[",
+   "["
+  ],
+  "逐级明细_IE1-8": [
+   {
+    "stage": 1,
+    "IE_eV": "",
+    "unc_eV": "0.00012",
+    "剥离前组态_电荷0": "[Ar].3d7.4s2",
+    "电离后组态_电荷1": "[Ar].3d8",
+    "NIST电离谱项_IonizedLevel": "3d8 3F<4>",
+    "剥离归属": "4s(余下4s弛豫入3d)"
+   },
+   {
+    "stage": 2,
+    "IE_eV": "",
+    "unc_eV": "0.0012",
+    "剥离前组态_电荷1": "[Ar].3d8",
+    "电离后组态_电荷2": "[Ar].3d7",
+    "NIST电离谱项_IonizedLevel": "3d7 4F<9/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 3,
+    "IE_eV": "[",
+    "unc_eV": "0.06",
+    "剥离前组态_电荷2": "[Ar].3d7",
+    "电离后组态_电荷3": "[Ar].3d6",
+    "NIST电离谱项_IonizedLevel": "3d6 5D<4>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 4,
+    "IE_eV": "[",
+    "unc_eV": "0.10",
+    "剥离前组态_电荷3": "[Ar].3d6",
+    "电离后组态_电荷4": "[Ar].3d5",
+    "NIST电离谱项_IonizedLevel": "3d5 6S<5/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 5,
+    "IE_eV": "[",
+    "unc_eV": "0.20",
+    "剥离前组态_电荷4": "[Ar].3d5",
+    "电离后组态_电荷5": "[Ar].3d4",
+    "NIST电离谱项_IonizedLevel": "3d4 5D<0>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 6,
+    "IE_eV": "[",
+    "unc_eV": "0.20",
+    "剥离前组态_电荷5": "[Ar].3d4",
+    "电离后组态_电荷6": "[Ar].3d3",
+    "NIST电离谱项_IonizedLevel": "3d3 4F<3/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 7,
+    "IE_eV": "[",
+    "unc_eV": "0.5",
+    "剥离前组态_电荷6": "[Ar].3d3",
+    "电离后组态_电荷7": "[Ar].3d2",
+    "NIST电离谱项_IonizedLevel": "3d2 3F<2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 8,
+    "IE_eV": "[",
+    "unc_eV": "0.6",
+    "剥离前组态_电荷7": "[Ar].3d2",
+    "电离后组态_电荷8": "[Ar].3d",
+    "NIST电离谱项_IonizedLevel": "3d 2D<3/2>",
+    "剥离归属": "3d"
+   }
+  ],
+  "source": "NIST Atomic Spectra Database, Ionization Energies (ie.pl), TSV 输出含 Ground Shells/Ground Config./Ionized Level 列; https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Sc-Zn&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&conf_out=on&ion_conf_out=on&level_out=on&e_out=0&unc_out=on&submit=Retrieve+Data",
+  "accessed": "2026-09-02",
+  "status": "NIST ASD 直连核验（本任务重抓，TSV 原件 /tmp/nist_ie_Sc_Zn_v2.tsv）",
+  "anomaly_note": "IE1 特例：Co⁺ 基组态为 3d8（非 3d7.4s）——剥离 4s 后剩余 4s 弛豫入 3d（Ionized Level=3d8 3F<4>）"
+ },
+ "Ni": {
+  "Z": 28,
+  "剥离序列_IE1-5": [
+   "4s(余下4s弛豫入3d)",
+   "3d",
+   "3d",
+   "3d",
+   "3d"
+  ],
+  "电离后组态_IE1-5": [
+   "[Ar].3d9",
+   "[Ar].3d8",
+   "[Ar].3d7",
+   "[Ar].3d6",
+   "[Ar].3d5"
+  ],
+  "IE_eV_IE1-5": [
+   "",
+   "",
+   "",
+   "[",
+   "["
+  ],
+  "逐级明细_IE1-8": [
+   {
+    "stage": 1,
+    "IE_eV": "",
+    "unc_eV": "0.000017",
+    "剥离前组态_电荷0": "[Ar].3d8.4s2",
+    "电离后组态_电荷1": "[Ar].3d9",
+    "NIST电离谱项_IonizedLevel": "3d9 2D<5/2>",
+    "剥离归属": "4s(余下4s弛豫入3d)"
+   },
+   {
+    "stage": 2,
+    "IE_eV": "",
+    "unc_eV": "0.000025",
+    "剥离前组态_电荷1": "[Ar].3d9",
+    "电离后组态_电荷2": "[Ar].3d8",
+    "NIST电离谱项_IonizedLevel": "3d8 3F<4>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 3,
+    "IE_eV": "",
+    "unc_eV": "0.019",
+    "剥离前组态_电荷2": "[Ar].3d8",
+    "电离后组态_电荷3": "[Ar].3d7",
+    "NIST电离谱项_IonizedLevel": "3d7 4F<9/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 4,
+    "IE_eV": "[",
+    "unc_eV": "0.25",
+    "剥离前组态_电荷3": "[Ar].3d7",
+    "电离后组态_电荷4": "[Ar].3d6",
+    "NIST电离谱项_IonizedLevel": "3d6 5D<4>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 5,
+    "IE_eV": "[",
+    "unc_eV": "0.06",
+    "剥离前组态_电荷4": "[Ar].3d6",
+    "电离后组态_电荷5": "[Ar].3d5",
+    "NIST电离谱项_IonizedLevel": "3d6 6S<5/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 6,
+    "IE_eV": "[",
+    "unc_eV": "1.0",
+    "剥离前组态_电荷5": "[Ar].3d5",
+    "电离后组态_电荷6": "[Ar].3d4",
+    "NIST电离谱项_IonizedLevel": "3d4 5D<0>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 7,
+    "IE_eV": "(",
+    "unc_eV": "2.0",
+    "剥离前组态_电荷6": "[Ar].3d4",
+    "电离后组态_电荷7": "[Ar].3d3",
+    "NIST电离谱项_IonizedLevel": "3d3 4F<3/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 8,
+    "IE_eV": "(",
+    "unc_eV": "2.1",
+    "剥离前组态_电荷7": "[Ar].3d3",
+    "电离后组态_电荷8": "[Ar].3d2",
+    "NIST电离谱项_IonizedLevel": "3d2 3F<2>",
+    "剥离归属": "3d"
+   }
+  ],
+  "source": "NIST Atomic Spectra Database, Ionization Energies (ie.pl), TSV 输出含 Ground Shells/Ground Config./Ionized Level 列; https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Sc-Zn&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&conf_out=on&ion_conf_out=on&level_out=on&e_out=0&unc_out=on&submit=Retrieve+Data",
+  "accessed": "2026-09-02",
+  "status": "NIST ASD 直连核验（本任务重抓，TSV 原件 /tmp/nist_ie_Sc_Zn_v2.tsv）",
+  "anomaly_note": "IE1 特例：Ni⁺ 基组态为 3d9（非 3d8.4s）——剥离 4s 后剩余 4s 弛豫入 3d（Ionized Level=3d9 2D<5/2>）"
+ },
+ "Cu": {
+  "Z": 29,
+  "剥离序列_IE1-5": [
+   "4s",
+   "3d",
+   "3d",
+   "3d",
+   "3d"
+  ],
+  "电离后组态_IE1-5": [
+   "[Ar].3d10",
+   "[Ar].3d9",
+   "[Ar].3d8",
+   "[Ar].3d7",
+   "[Ar].3d6"
+  ],
+  "IE_eV_IE1-5": [
+   "",
+   "",
+   "",
+   "[",
+   "["
+  ],
+  "逐级明细_IE1-8": [
+   {
+    "stage": 1,
+    "IE_eV": "",
+    "unc_eV": "0.000004",
+    "剥离前组态_电荷0": "[Ar].3d10.4s",
+    "电离后组态_电荷1": "[Ar].3d10",
+    "NIST电离谱项_IonizedLevel": "3d10 1S<0>",
+    "剥离归属": "4s"
+   },
+   {
+    "stage": 2,
+    "IE_eV": "",
+    "unc_eV": "0.00006",
+    "剥离前组态_电荷1": "[Ar].3d10",
+    "电离后组态_电荷2": "[Ar].3d9",
+    "NIST电离谱项_IonizedLevel": "3d9 2D<5/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 3,
+    "IE_eV": "",
+    "unc_eV": "0.012",
+    "剥离前组态_电荷2": "[Ar].3d9",
+    "电离后组态_电荷3": "[Ar].3d8",
+    "NIST电离谱项_IonizedLevel": "3d8 3F<4>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 4,
+    "IE_eV": "[",
+    "unc_eV": "0.05",
+    "剥离前组态_电荷3": "[Ar].3d8",
+    "电离后组态_电荷4": "[Ar].3d7",
+    "NIST电离谱项_IonizedLevel": "3d7 4F<9/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 5,
+    "IE_eV": "[",
+    "unc_eV": "0.7",
+    "剥离前组态_电荷4": "[Ar].3d7",
+    "电离后组态_电荷5": "[Ar].3d6",
+    "NIST电离谱项_IonizedLevel": "3d6 5D<4>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 6,
+    "IE_eV": "[",
+    "unc_eV": "1.0",
+    "剥离前组态_电荷5": "[Ar].3d6",
+    "电离后组态_电荷6": "[Ar].3d5",
+    "NIST电离谱项_IonizedLevel": "3d5 6S<5/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 7,
+    "IE_eV": "[",
+    "unc_eV": "1.2",
+    "剥离前组态_电荷6": "[Ar].3d5",
+    "电离后组态_电荷7": "[Ar].3d4",
+    "NIST电离谱项_IonizedLevel": "3d4 5D<0>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 8,
+    "IE_eV": "(",
+    "unc_eV": "2.1",
+    "剥离前组态_电荷7": "[Ar].3d4",
+    "电离后组态_电荷8": "[Ar].3d3",
+    "NIST电离谱项_IonizedLevel": "3d3 4F<3/2>",
+    "剥离归属": "3d"
+   }
+  ],
+  "source": "NIST Atomic Spectra Database, Ionization Energies (ie.pl), TSV 输出含 Ground Shells/Ground Config./Ionized Level 列; https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Sc-Zn&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&conf_out=on&ion_conf_out=on&level_out=on&e_out=0&unc_out=on&submit=Retrieve+Data",
+  "accessed": "2026-09-02",
+  "status": "NIST ASD 直连核验（本任务重抓，TSV 原件 /tmp/nist_ie_Sc_Zn_v2.tsv）"
+ },
+ "Zn": {
+  "Z": 30,
+  "剥离序列_IE1-5": [
+   "4s",
+   "4s",
+   "3d",
+   "3d",
+   "3d"
+  ],
+  "电离后组态_IE1-5": [
+   "[Ar].3d10.4s",
+   "[Ar].3d10",
+   "[Ar].3d9",
+   "[Ar].3d8",
+   "[Ar].3d7"
+  ],
+  "IE_eV_IE1-5": [
+   "",
+   "",
+   "",
+   "",
+   "["
+  ],
+  "逐级明细_IE1-8": [
+   {
+    "stage": 1,
+    "IE_eV": "",
+    "unc_eV": "0.000006",
+    "剥离前组态_电荷0": "[Ar].3d10.4s2",
+    "电离后组态_电荷1": "[Ar].3d10.4s",
+    "NIST电离谱项_IonizedLevel": "4s 2S<1/2>",
+    "剥离归属": "4s"
+   },
+   {
+    "stage": 2,
+    "IE_eV": "",
+    "unc_eV": "0.00025",
+    "剥离前组态_电荷1": "[Ar].3d10.4s",
+    "电离后组态_电荷2": "[Ar].3d10",
+    "NIST电离谱项_IonizedLevel": "3d10 1S<0>",
+    "剥离归属": "4s"
+   },
+   {
+    "stage": 3,
+    "IE_eV": "",
+    "unc_eV": "0.00012",
+    "剥离前组态_电荷2": "[Ar].3d10",
+    "电离后组态_电荷3": "[Ar].3d9",
+    "NIST电离谱项_IonizedLevel": "3d9 2D<5/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 4,
+    "IE_eV": "",
+    "unc_eV": "0.019",
+    "剥离前组态_电荷3": "[Ar].3d9",
+    "电离后组态_电荷4": "[Ar].3d8",
+    "NIST电离谱项_IonizedLevel": "3d8 3F<4>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 5,
+    "IE_eV": "[",
+    "unc_eV": "0.9",
+    "剥离前组态_电荷4": "[Ar].3d8",
+    "电离后组态_电荷5": "[Ar].3d7",
+    "NIST电离谱项_IonizedLevel": "3d7 4F<9/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 6,
+    "IE_eV": "[",
+    "unc_eV": "1.0",
+    "剥离前组态_电荷5": "[Ar].3d7",
+    "电离后组态_电荷6": "[Ar].3d6",
+    "NIST电离谱项_IonizedLevel": "3d6 5D<4>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 7,
+    "IE_eV": "[",
+    "unc_eV": "1.2",
+    "剥离前组态_电荷6": "[Ar].3d6",
+    "电离后组态_电荷7": "[Ar].3d5",
+    "NIST电离谱项_IonizedLevel": "3d5 6S<5/2>",
+    "剥离归属": "3d"
+   },
+   {
+    "stage": 8,
+    "IE_eV": "[",
+    "unc_eV": "1.7",
+    "剥离前组态_电荷7": "[Ar].3d5",
+    "电离后组态_电荷8": "[Ar].3d4",
+    "NIST电离谱项_IonizedLevel": "3d4 5D<0>",
+    "剥离归属": "3d"
+   }
+  ],
+  "source": "NIST Atomic Spectra Database, Ionization Energies (ie.pl), TSV 输出含 Ground Shells/Ground Config./Ionized Level 列; https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Sc-Zn&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&conf_out=on&ion_conf_out=on&level_out=on&e_out=0&unc_out=on&submit=Retrieve+Data",
+  "accessed": "2026-09-02",
+  "status": "NIST ASD 直连核验（本任务重抓，TSV 原件 /tmp/nist_ie_Sc_Zn_v2.tsv）"
+ }
+}

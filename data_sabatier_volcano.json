@@ -1,0 +1,554 @@
+{
+  "meta": {
+    "title": "Sabatier 火山图·合成氨催化剂数据考古",
+    "date_of_access": "2026-09-02",
+    "archivist": "数据考古代理（涡）",
+    "access_channels": [
+      "WebFetch 公开页面",
+      "Bash curl（直连 + 代理 http://127.0.0.1:7890）",
+      "Crossref / OpenAlex / Semantic Scholar / Unpaywall API",
+      "本机 SearXNG (127.0.0.1:8888)",
+      "PMC / arXiv / Nature OA PDF 全文提取（pypdf）"
+    ],
+    "integrity_rule": "所有数值字段均来自本次实际访问到的来源全文/页面原文；记忆值只允许出现在 pending_reference 字段；访问不到的一律标 UNVERIFIED"
+  },
+  "doi_audit": {
+    "note": "任务入口三个 DOI 经 doi.org / Crossref / OpenAlex 逐一核验，全部有误；已找到正确 DOI",
+    "entries": [
+      {
+        "claimed_paper": "Bligaard et al. 'The Brønsted–Evans–Polanyi relation and the volcano curve' J. Catal. 2004",
+        "claimed_doi": "10.1016/j.jcat.2003.12.029",
+        "verification": "doi.org 返回 404（未注册）；Semantic Scholar not found；Crossref/OpenAlex bibliographic 检索未命中该 DOI",
+        "actual_doi_of_that_paper": "10.1016/j.jcat.2004.02.034",
+        "actual_bibliography": "Bligaard, T.; Nørskov, J. K. et al. 'The Brønsted–Evans–Polanyi relation and the volcano curve in heterogeneous catalysis' J. Catal. 2004, 224(1), 206-217（卷页经 OpenAlex/Crossref 检索 + Fe3 论文参考文献双重核验）",
+        "source": [
+          "https://doi.org/10.1016/j.jcat.2003.12.029 (404, 2026-09-02)",
+          "https://api.crossref.org/works?query.bibliographic=... (2026-09-02)",
+          "/tmp/fe3_nc.txt ref.15（Nature Commun 2018 论文 PDF 原文引文，2026-09-02 访问）"
+        ]
+      },
+      {
+        "claimed_paper": "Jacobsen, Dahl, Clausen et al. 'Catalyst design by interpolation of the volcano plot: CO methanation' JACS 2007",
+        "claimed_doi": "10.1021/ja0709630",
+        "verification": "doi.org 返回 404；Crossref 标题检索无此文",
+        "actual_doi_of_that_paper": "10.1021/ja010963d",
+        "actual_bibliography": "Jacobsen, C. J. H.; Dahl, S.; Clausen, B. S.; Bahn, S.; Logadottir, A.; Nørskov, J. K. 'Catalyst Design by Interpolation in the Periodic Table: Bimetallic Ammonia Synthesis Catalysts' JACS 2001, 123(34), 8404-8405（注意：是合成氨不是 CO methanation；是 2001 不是 2007；JACS 页面原文确认卷期页与 620 次被引）",
+        "source": [
+          "https://doi.org/10.1021/ja0709630 (404, 2026-09-02)",
+          "https://api.crossref.org/works?query.title=... (2026-09-02)",
+          "https://api.openalex.org/works/doi:10.1021/ja010963d（返回 ACS 页面全文头，含 'Cite this: J. Am. Chem. Soc. 2001, 123, 34, 8404–8405'）"
+        ]
+      },
+      {
+        "claimed_paper": "Vojvodic et al. 'Exploring the limits: A low-pressure, low-temperature Haber–Bosch process' Chem. Phys. Lett. 2014",
+        "claimed_doi": "10.1016/j.cplett.2014.07.057",
+        "verification": "该 DOI 实际属于 Dhahri et al. 'Blue-green photoluminescence in BaZrO3−δ powders' Chem. Phys. Lett. 2014-08（Crossref 核验确认，DOI 抢注/张冠李戴型错误）",
+        "actual_doi_of_that_paper": "10.1016/j.cplett.2014.03.003",
+        "actual_bibliography": "Vojvodic, A.; Medford, A. J.; Studt, F.; Abild-Pedersen, F.; Khan, T. S.; Bligaard, T.; Nørskov, J. K. Chem. Phys. Lett. 2014, 598, 108-112（Crossref + OpenAlex 双核验；被引 530）",
+        "source": [
+          "https://api.crossref.org/works/10.1016/j.cplett.2014.07.057 (2026-09-02)",
+          "https://api.crossref.org/works?query.bibliographic=... (2026-09-02)",
+          "https://api.openalex.org/works/doi:10.1016/j.cplett.2014.03.003 (2026-09-02)"
+        ]
+      }
+    ]
+  },
+  "quantitative_data": {
+    "note": "火山图 (descriptor, activity) 配对数据。最完整的公开可核验配对来自 Toulhoat & Raybaud 组 arXiv 论文图4b（碳载金属合成氨实验活性火山图，TOF 对金属-氮键能 EM-N）；DFT N 原子吸附能配对来自 Saidi et al. arXiv 与 Liu et al. Nature Commun。",
+    "volcano_series_experimental_TOF_vs_MN_bond_energy": {
+      "descriptor": "EM-N (metal–nitrogen bond energy, kJ/mol, 计算值)",
+      "activity": "TOF NH3 synthesis (mol NH3 / mol M / s, 实验活性，碳载金属催化剂)",
+      "volcano_peak_position": "95.0 kJ/mol",
+      "conditions": "工业相关条件（图注给出反应为 1/2 N2 + 3/2 H2 = NH3；条件细节在论文 ESI section 5，未取到，标 UNVERIFIED）",
+      "metals_in_series": [
+        "Ru",
+        "MoFe",
+        "Re",
+        "Co",
+        "Pt",
+        "Ir",
+        "Os",
+        "Rh",
+        "Ni"
+      ],
+      "data_status": "降级收集：图4b 为图形数据，逐点数值未在正文列出（只给出峰位 95.0 与金属名单及 TOF 轴范围 1E-3 至 1E+2）；每个金属的精确 (EM-N, TOF) 点 = UNVERIFIED",
+      "primary_source": {
+        "title": "Prediction of optimal catalysts for a given chemical reaction (volcano plots without DFT)",
+        "authors": "Toulhoat H. et al.（作者名在 PDF 中被字体内嵌符号截断，unverified 全名）",
+        "url": "https://arxiv.org/pdf/1812.09531",
+        "accessed": "2026-09-02",
+        "quote": "Figure 4b) demonstrates that another nice volcano plot is obtained for ammonia synthesis catalyzed by carbon supported metals 28,29, using the EM-N descriptor and revealing an optimal value of 95 kJ.mol-1",
+        "figure_axis_text_extracted": "TOF NH3Synthesis (mol NH3.mol-1M.s-1) vs EMNYY (kJ.mol-1)，峰位标注 95.0；金属标签: Ru MoFe Re Co Pt Ir Os Rh Ni；TOF 范围 1E-03 至 1E+02",
+        "ref28_29_in_paper": "28: A. Ozaki, Accounts Chem. Res., 1981, 14, 16.  29: C.J.H. Jacobsen, S. Dahl, B.S. Clausen, S. Bahn, A. Logadottir, J.K. Nørskov, J. Am. Chem. Soc., 2001, 123, 8404."
+      }
+    },
+    "nitrogen_adsorption_energy_DFT": {
+      "note": "N 原子吸附能 DFT 值，来自可全文核验的 OA 论文",
+      "entries": [
+        {
+          "catalyst": "Co fcc(111)",
+          "N_ads_eV": -0.56,
+          "condition": "DFT-PBE, 2x2x5 slab, ∆E = E(slab+X) − E(slab) − E(X in N2/H2 reference)",
+          "source": "Saidi, W. A.; Shadid, W.; Veser, G. 'Optimization of High Entropy Alloy Catalyst for Ammonia Decomposition and Ammonia Synthesis' arXiv:2104.07827",
+          "url": "https://arxiv.org/pdf/2104.07827",
+          "accessed": "2026-09-02",
+          "quote": "we find that nitrogen adsorption energies on Co and Mo fcc (111) are -0.56 and -2.51 eV/N, respectively"
+        },
+        {
+          "catalyst": "Mo fcc(111)",
+          "N_ads_eV": -2.51,
+          "condition": "同上 DFT-PBE",
+          "source": "同上 arXiv:2104.07827",
+          "url": "https://arxiv.org/pdf/2104.07827",
+          "accessed": "2026-09-02",
+          "quote": "同上句"
+        },
+        {
+          "catalyst": "Ru(0001) short-bridge site",
+          "N_ads_eV": -1.27,
+          "condition": "DFT-PBE，台阶位点，论文称 optimum nitrogen adsorption energy 位置",
+          "source": "同上 arXiv:2104.07827",
+          "url": "https://arxiv.org/pdf/2104.07827",
+          "accessed": "2026-09-02",
+          "quote": "For Ru (0001), we find that the optimum nitrogen adsorption energy is located at the short-bridge site and has binding energy E*N2=−1.27 eV/N. This agrees with previous results."
+        },
+        {
+          "catalyst": "Fe C7 site (Fe(111)/Fe(211) 类台阶位)",
+          "N_ads_eV_per_N": -1.2,
+          "note": "原文给出两个 *N 合计吸附能 −2.4 eV，即 −1.2 eV/N（换算，标明换算）",
+          "condition": "DFT，700 K/100 bar 微动力学语境",
+          "source": "Liu, J.-C.; Ma, X.-L.; Li, Y.; Wang, Y.-G.; Xiao, H.; Li, J. 'Heterogeneous Fe3 single-cluster catalyst for ammonia synthesis via an associative mechanism' Nat. Commun. 2018, 9, 1610",
+          "url": "https://www.nature.com/articles/s41467-018-03795-8.pdf （PMC 镜像 https://pmc.ncbi.nlm.nih.gov/articles/PMC5913218/ 交叉核对一致）",
+          "accessed": "2026-09-02",
+          "quote": "the adsorption energy of two *N is as high as −2.4 eV (Fig. 2), which results in dominant coverage of *N on the active center ... the RDS on Fe C7 site is the desorption of *NHx species"
+        },
+        {
+          "catalyst": "Ru B5 site (Ru(0001) step)",
+          "N_ads_eV_per_N": -0.4,
+          "note": "原文给出两个 *N 合计 −0.8 eV，即 −0.4 eV/N（换算，标明换算）",
+          "condition": "同上",
+          "source": "同上 Liu et al. Nat. Commun. 2018",
+          "url": "同上",
+          "accessed": "2026-09-02",
+          "quote": "For Ru B5 site, the transition state energy of *N2 dissociation is 0.4 eV, with two *N adsorption energy of −0.8 eV. ... Thus, Ru B5 site is the closest to the top of volcano curve, which balances the *N2 dissociation and *NHx desorption processes."
+        },
+        {
+          "catalyst": "Co (纯金属表面，定性)",
+          "qualitative": "binds nitrogen too weakly",
+          "source": "同上 arXiv:2104.07827",
+          "accessed": "2026-09-02",
+          "quote": "Co surface binds nitrogen too weakly while Mo surface binds nitrogen too strongly"
+        }
+      ]
+    },
+    "TOF_values": {
+      "entries": [
+        {
+          "catalyst": "Fe3/θ-Al2O3(010) 单簇催化剂（associative 机制）",
+          "TOF_s^-1_site^-1": 0.014,
+          "expression": "1.4 × 10^-2 s^-1 site^-1",
+          "conditions": "100 bar, 700 K（微动力学模型计算值）",
+          "source": "Liu et al. Nat. Commun. 2018, 9, 1610",
+          "url": "https://www.nature.com/articles/s41467-018-03795-8.pdf",
+          "accessed": "2026-09-02",
+          "quote": "The calculated TOF of ammonia synthesis on Fe3/Al2O3 is 1.4 × 10−2 s−1 site−1 at 100 bar and 700 K, which is comparable to that on the Ru B5 site"
+        },
+        {
+          "catalyst": "Ru B5 site",
+          "TOF_s^-1_site^-1": "UNVERIFIED（正文只说 Fe3 TOF 与其 comparable，具体数值在其 ref.12 = Vojvodic 2014 论文内，未取到全文）",
+          "source": "同上（间接）"
+        },
+        {
+          "catalyst": "Fe(111) 单晶",
+          "TOF_s^-1": 9.7,
+          "conditions": "15 atm H2 + 5 atm N2（实验，Somorjai 组数据）",
+          "source": "Phosphorus Modification of Iron: Mechanistic Insights into Ammonia Synthesis (PMC11054198) 转述",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11054198/",
+          "accessed": "2026-09-02",
+          "quote": "Fe(111) turnover rate of 9.7 s−1 at 15 atm H2 and 5 atm N2, attributed to experiments"
+        },
+        {
+          "catalyst": "碳载金属系列（Ru, MoFe, Re, Co, Pt, Ir, Os, Rh, Ni）",
+          "TOF_range": "1E-3 到 1E+2 mol NH3 / mol M / s（图轴范围）",
+          "data_status": "逐点数值 UNVERIFIED（图形数据，正文只给峰位 95 kJ/mol）",
+          "source": "arXiv:1812.09531 Figure 4b",
+          "accessed": "2026-09-02"
+        }
+      ]
+    },
+    "qualitative_volcano_order": {
+      "note": "降级收集的定性火山序（多来源交叉）",
+      "entries": [
+        {
+          "order": "Mo > Fe > Co > Ni（与 N 结合从强到弱）",
+          "source": "OSTI 报告（NRR 催化剂设计综述，含 Jacobsen 2001 火山图转述）",
+          "url": "https://www.osti.gov/servlets/purl/1770110",
+          "accessed": "2026-09-02",
+          "quote": "From the volcano curve, the relative affinity for these metals from strongest to weakest interactions with N2 are as follows Mo > Fe > Co > Ni (Figure 3). Activities for ternary nitrides were 2.6 to 4 times higher than γ-Mo2N and activities increased up to 30 times when 5 wt% cesium nitrate was incorporated"
+        },
+        {
+          "order": "强吸附侧 Re, Mo, Fe；弱吸附侧 Co, Ni（Pd 更弱）；峰附近 Fe, Ru；CoMo 双金属插值最优",
+          "source": "Liu et al. Nat. Commun. 2018 + PMC12112505 综述",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12112505/",
+          "accessed": "2026-09-02",
+          "quote_1": "Stronger adsorption of N atom implies lower N2 dissociation barrier but higher NHx desorption energies, such as on Re, Mo, Fe metal surfaces; while weaker adsorption of N atom indicates higher N2 dissociation barrier and lower NHx desorption energies, such as on Pd, Co, Ni metal surfaces.",
+          "quote_2": "Near the volcano peak, metals like Fe, and Ru exhibit intermediate nitrogen binding, with CoMo emerging as the most effective catalyst"
+        },
+        {
+          "order": "Co3Mo3N 活性最高（Cs 促进前后均然）；Fe3Mo3N、Ni2Mo3N 亦高活",
+          "source": "Hargreaves 综述（Appl. Petrochem. Res. 2014, 4, 3-10, OA PDF）转述 Jacobsen 2001",
+          "url": "https://link.springer.com/content/pdf/10.1007/s13203-014-0049-y.pdf",
+          "accessed": "2026-09-02",
+          "quote": "The volcano curve can also be used to rationalise the relatively high ammonia synthesis activity of the Ni2Mo3N phase. Fe3Mo3N, which is iso-structural with Co3Mo3N, is also a high activity ternary nitride for the reaction"
+        },
+        {
+          "electrochemical_NRR_volcano": "Mo, Fe, Rh, Ru surfaces are predicted to be the most active toward NRR（Skúlason 2012 火山图转述）",
+          "source": "OSTI 报告",
+          "url": "https://www.osti.gov/servlets/purl/1770110",
+          "accessed": "2026-09-02"
+        }
+      ]
+    },
+    "fe3_supplementary_quantities": {
+      "note": "Fe3 论文中附加可核验数值，供机理侧写",
+      "entries": [
+        {
+          "item": "Fe C7 位 *N2 解离过渡态能量",
+          "value": "−0.10 eV（相对气相 N2+洁净表面）",
+          "source": "Liu 2018 PMC 版"
+        },
+        {
+          "item": "Ru B5 位 *N2 解离过渡态能量",
+          "value": "0.4 eV",
+          "source": "Liu 2018 PMC 版"
+        },
+        {
+          "item": "Fe3 位 *N2 解离势垒 vs *N2 加氢势垒",
+          "value": "加氢比解离低 0.91 eV；速率常数 9.8×10^5 s^-1（加氢）vs 5.2×10^-1 s^-1（解离），700 K, 100 bar",
+          "source": "Liu 2018 PMC 版"
+        },
+        {
+          "item": "Ru/MgO 上 N2 吸附能",
+          "value": "−1.95 eV（对比 Ru/SiO2 −0.75, Ru/Al2O3 −1.33）",
+          "source": "PMC12112505 综述转述 Zhang et al.",
+          "accessed": "2026-09-02"
+        }
+      ]
+    }
+  },
+  "sabatier_principle": {
+    "standard_statement": {
+      "text": "理想催化剂应以中等强度结合反应中间体——太强阻碍产物脱附，太弱妨碍中间体吸附；由此产生活性对吸附能的火山型关系",
+      "source": "arXiv:2510.10555 引言（2025 OA 论文，转述教科书共识）",
+      "url": "https://arxiv.org/pdf/2510.10555",
+      "accessed": "2026-09-02",
+      "quote": "It postulates that an ideal catalyst should bind reaction intermediates with moderate strength—neither too strongly, which hinders product desorption, nor too weakly, which impedes intermediate adsorption. This intrinsic trade-off results in the well-known volcano-type activity relationship"
+    },
+    "ammonia_specific_statement": {
+      "text": "合成氨语境：最优催化剂的 N 吸附足够强以活化 N2，又足够弱以允许后续加氢与 NHx 脱附",
+      "source": "PMC12112505 综述（Catalysts 期刊）",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12112505/",
+      "accessed": "2026-09-02",
+      "quote": "This trend aligns with Sabatier's principle: optimal catalysts exhibit intermediate nitrogen adsorption, strong enough to activate N2, but weak enough to permit subsequent hydrogenation and desorption."
+    },
+    "earliest_literature": {
+      "entries": [
+        {
+          "citation": "P. Sabatier; J.-B. Senderens, C. R. Hebd. Seances Acad. Sci. 1902, 134, 514–516（CO/CO2 加氢制甲烷，即 methanation / Sabatier 反应的原始发现）",
+          "verification": "卷页 134, 514-516 经 RSC Catal. Sci. Technol. 2020 (d0cy01254h) 与 IOP 文章两条独立引文核验一致",
+          "accessed": "2026-09-02",
+          "source_urls": [
+            "https://pubs.rsc.org/en/content/articlelanding/2020/cy/d0cy01254h",
+            "https://iopscience.iop.org/article/10.1088/1749-4699/2/1/015006"
+          ]
+        },
+        {
+          "citation": "P. Sabatier; J.-B. Senderens, C. R. Hebd. Seances Acad. Sci. 1902, 134, 689–691（同系列第二篇）",
+          "verification": "卷页 134, 689-691 经 Wiley CIT 2023 与 RSC GC 2024 两条独立引文核验一致",
+          "accessed": "2026-09-02",
+          "source_urls": [
+            "https://onlinelibrary.wiley.com/doi/full/10.1002/cite.202200201",
+            "https://pubs.rsc.org/gc/article/26/1/122/810434"
+          ]
+        },
+        {
+          "citation": "P. Sabatier, Berichte der Deutschen Chemischen Gesellschaft, 1911, 44, 1984（Sabatier 原理的早期综合性表述，被 Toulhoat & Raybaud 组作为原理出处引用）",
+          "verification": "引文经 arXiv:1812.09531 参考文献 [4] 核验；原文全文 UNVERIFIED（未取到 Berichte 原文）",
+          "accessed": "2026-09-02",
+          "source_urls": [
+            "https://arxiv.org/pdf/1812.09531"
+          ]
+        },
+        {
+          "note": "Wikipedia (Methanation / Paul Sabatier 条目) 亦载 'The methanation reactions of COx were first discovered by Sabatier and Senderens in 1902'，经 SearXNG 结果摘要核验（直连 Wikipedia 被墙，页面全文 UNVERIFIED）",
+          "accessed": "2026-09-02"
+        }
+      ]
+    }
+  },
+  "bep_relation": {
+    "standard_form_catalysis": {
+      "form": "E_a = E_0 + α·ΔH（活化能与反应焓线性相关；对 N2 解离步，ΔH 用 N 吸附能描述）",
+      "note": "该线性形式在 Nørskov 组文献中通称 BEP；本次核验到其理论出处为 Evans–Polanyi LFER",
+      "source": "综合 PMC12112505 §5.1 与 OGST 综述"
+    },
+    "evans_polanyi_original_form": {
+      "form": "ΔG‡ = β1 + β2·ΔG_R",
+      "parameter_meaning": "β1 截距（内在势垒项），β2 斜率（过渡态位置/反应焓向活化能的传递系数，0=早垒平坦，1=晚垒完全传递）；β1、β2 依赖于势能面直线近似的斜率与反应物-产物初始距离",
+      "source": "Oil & Gas Science and Technology – Rev. IFP Energies nouvelles 71(3) (2016) 45（动力学方法综述，OA）",
+      "url": "https://ogst.ifpenergiesnouvelles.fr/articles/ogst/full_html/2016/03/ogst150117/ogst150117.html",
+      "accessed": "2026-09-02",
+      "quote": "The origin of such linear free-energy relationships was first derived by Evans and Polanyi (1935, 1936, 1938), who approximated the PES by straight lines. This approximation leads to ... ΔG‡ = β1 + β2·ΔG_R (20) where β1 and β2 depend on the slopes of the lines and the initial distance between reactants and products. ... Evans and Polanyi (1938) also showed that the activation energies depend linearly on the reaction enthalpies."
+    },
+    "bronsted_equation": {
+      "form": "k = α1·(Ka)^α2，线性化 ln(k) = α1 + α2·ln(Ka)",
+      "source": "同上 OGST 综述，引 Brønsted and Pedersen 1924; Brønsted 1928",
+      "accessed": "2026-09-02",
+      "quote": "For homogeneous acid-catalyzed reactions, Brønsted (Brønsted and Pedersen, 1924; Brønsted, 1928) observed that strongly exothermic reactions have a low activation energy and derived ... k = α1·(Ka)^α2"
+    },
+    "bronsted_1928_doi": {
+      "citation": "J. N. Brønsted, 'Acid and Basic Catalysis.' Chemical Reviews 1928, 5(3), 231（DOI: 10.1021/cr60019a001，Crossref 核验题名/期刊/年份；页码 231 起为待核验参考）",
+      "verified_fields": [
+        "title: Acid and Basic Catalysis.",
+        "journal: Chemical Reviews",
+        "year: 1928-10"
+      ],
+      "accessed": "2026-09-02"
+    },
+    "ammonia_bep_key_papers": [
+      {
+        "citation": "Logadottir, A.; Rod, T. H.; Nørskov, J. K.; Hammer, B.; Dahl, S.; Jacobsen, C. J. H. 'The Brønsted–Evans–Polanyi Relation and the Volcano Plot for Ammonia Synthesis over Transition Metal Catalysts' J. Catal. 2001, 197(2), 229-231. DOI: 10.1006/jcat.2000.3087",
+        "verification": "OpenAlex + Semantic Scholar 题名卷页核验；被引 723；全文 UNVERIFIED（ScienceDirect PDF 拿到的是 Cloudflare HTML）",
+        "accessed": "2026-09-02"
+      },
+      {
+        "citation": "Bligaard, T. et al. J. Catal. 2004, 224, 206-217. DOI: 10.1016/j.jcat.2004.02.034",
+        "verification": "Crossref 检索 + Fe3 论文参考文献双重核验；全文 UNVERIFIED",
+        "accessed": "2026-09-02"
+      },
+      {
+        "citation": "Cheng, J.; Hu, P.; Ellis, P.; French, S.; Kelly, G.; Lok, C. M. 'Brønsted−Evans−Polanyi Relation of Multistep Reactions and Volcano Curve in Heterogeneous Catalysis' J. Phys. Chem. C 2008, 112, 1308-1311. DOI: 10.1021/jp711191j",
+        "verification": "Crossref + Semantic Scholar 核验（摘要被出版商 elided）；ACS PDF 返回 Cloudflare HTML，全文 UNVERIFIED",
+        "accessed": "2026-09-02"
+      }
+    ]
+  },
+  "vojvodic_2014_content_status": {
+    "paper": "Vojvodic et al. Chem. Phys. Lett. 2014, 598, 108-112",
+    "status": "全文与摘要 UNVERIFIED——Elsevier 403，无 OA 副本（Unpaywall is_oa:false），PMC 引文均只作参考条目转述",
+    "indirect_quote_found": "PMC11054198 仅以 ref.9 引用支撑 'surface intermediates formed during the reaction (NHx, x = 0–3) often bind strongly to transition metal catalysts'（一般性结论，未给出其预测数值）",
+    "accessed": "2026-09-02"
+  },
+  "wikipedia_status": {
+    "note": "任务建议的 Wikipedia 通道全程不可用：en.wikipedia.org / simple.wikipedia.org 直连与代理均 SSL EOF/超时；DBpedia 返回空 JSON；REST API EXIT 35。 volcano plot 条目内容 UNVERIFIED",
+    "mirror_attempt": "SearXNG 结果摘要中拿到 Methanation 条目与 Paul Sabatier 条目的 1902 表述（见 sabatier_principle.earliest_literature）",
+    "accessed": "2026-09-02"
+  },
+  "suspicious_values": [
+    "arXiv:1812.09531 图4b 金属标签 'MoFe' 是单一双金属催化剂标签（Jacobsen 2001 的 CoMo 类插值逻辑的实验活性来源之一），非 Mo+Fe 混合；使用时须回原文 ESI 核对（UNVERIFIED）",
+    "Ru B5 位 N 吸附能 −0.4 eV/N 与 Ru(0001) 短桥位 −1.27 eV/N 差异大：前者是 Liu 2018 的微动力学拟合值（两个 *N 合计），后者是纯 DFT 台阶位计算值，语境不同不可直接混用",
+    "carbon-supported-metals 火山 descriptor 是 EM-N（金属-氮键能，kJ/mol）而非 ΔE_N（吸附能，eV），两套坐标不可线性互推（95 kJ/mol 峰位≠−0.99 eV 吸附能）",
+    "Co3Mo3N 上 N2 端吸附 E_ad=+0.415 eV（吸热）是 MvK 机制语境，与金属面解离吸附语境不同（PMC12112505 引 Zeinalipour-Yazdi 2018）"
+  ],
+  "failed_channels_log": [
+    {
+      "channel": "Semantic Scholar DOI:10.1016/j.jcat.2003.12.029",
+      "result": "not found"
+    },
+    {
+      "channel": "doi.org 10.1016/j.jcat.2003.12.029 / 10.1021/ja0709630",
+      "result": "HTTP 404（任务 DOI 未注册）"
+    },
+    {
+      "channel": "ACS pubs.acs.org PDF (jp711191j, ja010963d)",
+      "result": "Cloudflare HTML 挡板"
+    },
+    {
+      "channel": "ScienceDirect PDF/AM 页（Logadottir 2001, Medford 2015, Vojvodic 2014）",
+      "result": "403 / Cloudflare HTML"
+    },
+    {
+      "channel": "Wiley pdfdirect (aesr.202000043)",
+      "result": "Cloudflare HTML"
+    },
+    {
+      "channel": "RSC articlepdf (c9sc02432j 等)",
+      "result": "Cloudflare HTML"
+    },
+    {
+      "channel": "Wikipedia 全部端点",
+      "result": "SSL EOF / 超时（直连与代理皆然）"
+    },
+    {
+      "channel": "MDPI / itwas / cell.com PDF",
+      "result": "403 或 HTML 挡板"
+    },
+    {
+      "channel": "九州大学 kyushu.pdf",
+      "result": "PDF 下载不完整（EOF marker not found）"
+    },
+    {
+      "channel": "代理 curl https (EXIT 35) 多次",
+      "result": "mihomo 对 wikipedia/TLS 握手不稳"
+    }
+  ],
+  "volcano_points_v2": {
+    "_meta": {
+      "date_accessed": "2026-09-02",
+      "collector": "数据考古代理·任务B续",
+      "integrity_rule": "每个数值/序列只写本次（2026-09-02）实际访问到的来源文本层；图形数据只收『图上可读的相对位置/标签/轴范围』并降级标注 relative_only；训练记忆一律不写。",
+      "summary": "本轮新增：① Toulhoat Fig4b 文本层标签+轴范围+峰位（升级为 PDF 文本层核验）；② Cholach Re/Co 体系 TOF 三点比值；③ Zhang 2022 SAA/二聚体火山峰定性配对；④ OSTI 报告氮化物活性倍数；⑤ Medford 2015 DOI 更正。"
+    },
+    "toulhoat_fig4b_textlayer": {
+      "figure": "Fig. 4b — 合成氨碳载金属火山图（实验活性 TOF vs E_MN，Yin-Yang 法计算的体相氮化物 EMN 作横坐标代理）",
+      "peak_EMN_kJ_per_mol": 95.0,
+      "x_axis_range_kJ_per_mol": [
+        40,
+        160
+      ],
+      "y_axis_range_TOF_molNH3_per_molM_per_s": [
+        0.001,
+        100.0
+      ],
+      "metal_labels_in_figure_order": [
+        "Ru",
+        "MoFe",
+        "Re",
+        "Co",
+        "Pt",
+        "Ir",
+        "Os",
+        "Rh",
+        "Ni"
+      ],
+      "nitride_labels_in_figure": [
+        "Ru2N",
+        "MoN",
+        "Fe2N",
+        "Re2N",
+        "CoN2",
+        "PtN2",
+        "IrN2",
+        "OsN2",
+        "Rh2N",
+        "NiN2"
+      ],
+      "caption_quote": "b) volcano plot for the synthesis of ammonia by carbon supported metals (see section 4 in Supplementary Materials). In ordinates are reported (log scale) the experimental data from Ozaki 28, also used by Jacobsen et al. 23,2. In abscissae, EMS and EMN values computed according to the Yin Yang method for bulk unit-cells of the various sulfides and nitrides indicated.",
+      "data_status": "图标签/轴范围/峰位 = PDF 文本层核验（VERIFIED）；每个金属的逐点 (E_MN, TOF) 坐标 = 图形数据，文本层不含，UNVERIFIED",
+      "source": "https://arxiv.org/e-print/1812.09531（arXiv 40 页版 PDF 文本层，/tmp/toulhoat_src.tar；同内容见 optcat.pdf） ; https://arxiv.org/pdf/1812.09531 (Fig.4b)",
+      "accessed": "2026-09-02"
+    },
+    "cholach_2021_ReCo_TOF_ratios": {
+      "system": "Re1/Co(0001), Re2/Co(0001), Re(0001) — DFT 比活性（specific TOF）",
+      "points": [
+        {
+          "site": "Re1/Co(0001) 单原子 Re",
+          "TOF_relative": 8000.0
+        },
+        {
+          "site": "Re2/Co(0001) 双原子 Re",
+          "TOF_relative": 32.0
+        },
+        {
+          "site": "Re(0001) 平面",
+          "TOF_relative": 1.0
+        }
+      ],
+      "note": "三值为同一研究中相互比较的 specific TOF（无绝对单位标注于转述文，配对描述符值未给出）——活性极差 4 个数量级，单原子 Re1 最优＝弱吸附位点靠近火山峰的实例",
+      "data_status": "TOF 比值 VERIFIED（转述文本）；(descriptor, TOF) 完整配对 = 不可得",
+      "source": "https://pdfs.semanticscholar.org/8d0e/181f917b81d6f7a26fd58f7cbd80607154ec.pdf（Chem. Sci. 2024, 15, 5897-5915 综述 OA PDF，本次下载并提取文本） ; 原始研究: Cholach & Bryliakova, Mol. Catal. 2021, 513, 111801（未直接访问，UNVERIFIED）",
+      "accessed": "2026-09-02",
+      "quote": "the specific TOF on the basis of Re1/Co(0001), Re2/Co(0001), and the plane Re(0001) changed in the order of 8.0 × 10³, 32.0, and 1.0, respectively"
+    },
+    "zhang2022_SAA_dimer_volcano": {
+      "system": "TM1/Ag(111) 单原子合金 与 TM2/Ag 二聚体合金，合成氨微动力学火山",
+      "points": [
+        {
+          "catalyst": "Nb/Ag SAA",
+          "position": "volcano peak（该体系族内）",
+          "qualitative": true
+        },
+        {
+          "catalyst": "Mo2/Ag dimer alloy",
+          "position": "TOF 高于 Nb/Ag SAA（BEP 更接近理想极限）",
+          "qualitative": true
+        }
+      ],
+      "data_status": "relative_only（定性位置，无数值）",
+      "source": "https://pdfs.semanticscholar.org/8d0e/181f917b81d6f7a26fd58f7cbd80607154ec.pdf（Chem. Sci. 2024, 15, 5897-5915 综述 OA PDF，本次下载并提取文本） ; 原始研究: Zhang et al., ACS Catal. 2022, 12, 9201-9212（未直接访问，UNVERIFIED）",
+      "accessed": "2026-09-02",
+      "quote": "Zhang et al. revealed that the Nb/Ag SAA was located at the volcano peak of NH3 synthesis on the basis of the TM1/Ag(111) system, while the Mo2/Ag dimer alloy exhibited a much higher TOF value compared with Nb/Ag SAA"
+    },
+    "osti_report_nitride_multiples": {
+      "system": "三元氮化物 Fe3Mo3N / Co3Mo3N / Ni2Mo3N vs γ-Mo2N（工业相关条件实验）",
+      "points": [
+        {
+          "item": "三元氮化物活性 vs γ-Mo2N",
+          "value": "2.6–4 倍"
+        },
+        {
+          "item": "掺 5 wt% CsNO3 后活性增幅",
+          "value": "up to 30 倍"
+        },
+        {
+          "item": "金属-氮亲和序（火山图读出）",
+          "value": "Mo > Fe > Co > Ni"
+        }
+      ],
+      "data_status": "倍数/排序 VERIFIED（报告文本层）；逐点 (E, TOF) 无",
+      "source": "https://www.osti.gov/servlets/purl/1770110（NRR 综述报告 PDF，本次完整下载 20 页并提取文本）",
+      "accessed": "2026-09-02",
+      "quote": "Activities for ternary nitrides were 2.6 to 4 times higher than γ-Mo2N and activities increased up to 30 times when 5 wt% cesium nitrate was incorporated into the catalyst. The Co3Mo3N catalyst showed the highest activity before and after cesium nitride was used to promote NRR."
+    },
+    "singh2018_suncat_status": {
+      "paper": "Singh, Montoya, Rohr, Tsai, Vojvodic, Nørskov, ACS Catal. 2018, 8, 4017-4024, DOI 10.1021/acscatal.8b00106",
+      "what_verified": "全文 AM（OSTI 1459599）已获取：Mo dimer in Au 与 Re stripe in Cu(211) 属最优 top-stable 候选；MoS2 金属边亦属最佳；2E_N 逐体系数值在 Table S1（SI 未随 AM 提供，ACS SI 被 Cloudflare 挡，UNVERIFIED）",
+      "quote": "Systems such as an Mo dimer in Au and an Re stripe in Cu are among the most promising top-stable candidates on the activity heatmap. The metal edge of MoS2 ... is also, notably, among the best candidate catalyst systems in our study.",
+      "source": "https://www.osti.gov/servlets/purl/1459599（Singh et al. ACS Catal. 2018, 8, 4017-4024 接收稿 AM PDF，OSTI green OA，本次下载提取） ; ACS SI https://pubs.acs.org/doi/suppl/10.1021/acscatal.8b00106/suppl_file/cs8b00106_si_001.pdf（Cloudflare 挡板，UNVERIFIED）",
+      "accessed": "2026-09-02",
+      "data_status": "定性结论 VERIFIED；Table S1 逐点 2E_N 值 UNVERIFIED"
+    },
+    "medford2015_doi_correction": {
+      "task_doi_was": "10.1016/j.jcat.2014.09.022",
+      "task_doi_status": "错误——该 DOI 在 OpenAlex 挂名 'Heteropolyacid-based ionic liquids...acetylation of glycerol'（DOI 张冠李戴型污染实锤）",
+      "correct_doi": "10.1016/j.jcat.2014.12.033",
+      "correct_bibliography": "Medford, A. J.; Vojvodic, A.; Hummelshøj, J. S.; Voss, J.; Abild-Pedersen, F.; Studt, F.; Bligaard, T.; Nilsson, A.; Nørskov, J. K. 'From the Sabatier principle to a predictive theory of transition-metal heterogeneous catalysis' J. Catal. 2015, 328, 36-42",
+      "verification": "Crossref 题名检索命中 + OpenAlex 题名/作者/卷页核验 + PMC 综述参考文献第185条独立一致；OA: OSTI 1244560 仅链向出版商 AM（Elsevier Cloudflare 挡板），全文 UNVERIFIED",
+      "source": [
+        "https://api.crossref.org/works?query.bibliographic=... (2026-09-02)",
+        "https://api.openalex.org/works/doi:10.1016/j.jcat.2014.12.033 (2026-09-02)",
+        "https://www.osti.gov/biblio/1244560 (2026-09-02)"
+      ],
+      "accessed": "2026-09-02"
+    },
+    "numeric_pair_count_assessment": {
+      "existing_verified_numeric_pairs": [
+        {
+          "catalyst": "Fe C7 site",
+          "descriptor": "2*N 吸附能 −2.4 eV (−1.2 eV/N)",
+          "activity": "TOF 比 Fe3 低 2 个数量级（Chem Sci 2024 转述）",
+          "status": "VERIFIED"
+        },
+        {
+          "catalyst": "Ru B5 site",
+          "descriptor": "2*N 吸附能 −0.8 eV (−0.4 eV/N)",
+          "activity": "TOF ≈ Fe3/Al2O3 的 1.4e-2 s-1 site-1 (comparable)",
+          "status": "VERIFIED（comparable 语义）"
+        },
+        {
+          "catalyst": "Fe(111) 单晶",
+          "descriptor": "（无 E_N 配对）",
+          "activity": "TOF 9.7 s-1, 15 atm H2+5 atm N2",
+          "status": "VERIFIED"
+        },
+        {
+          "catalyst": "Re1/Co(0001) vs Re2/Co vs Re(0001)",
+          "descriptor": "未给出",
+          "activity": "8.0e3 : 32.0 : 1.0",
+          "status": "VERIFIED（比值）"
+        }
+      ],
+      "conclusion": "严格 (ΔE_N, TOF) 完整逐点对仍不可得（原始火山图数据均锁在图形/受版权 SI 中）；现有=2 个半定量完整对 + 3 组比值/排序 + 图级峰位 95 kJ/mol。达成『最低目标』的降级形态。"
+    }
+  }
+}

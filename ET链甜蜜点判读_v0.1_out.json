@@ -1,0 +1,243 @@
+{
+ "meta": {
+  "accessed": "2026-09-02",
+  "rule": "r=-dG/lambda; <0 uphill; 0-0.8 normal; 0.8-1.25 activationless; >1.25 inverted",
+  "lambda_calib": {
+   "RC": "0.25 eV (Nobel lecture, verified)",
+   "respiratory": "0.7 eV (Moser/Dutton 2006, verified)"
+  }
+ },
+ "rows": [
+  {
+   "chain": "A_RC",
+   "site": "A0_cytC2_to_P",
+   "dG_eV": -0.16,
+   "lambda_eV": 0.5,
+   "lambda_caliber": "site_measured",
+   "r": 0.32,
+   "region": "normal"
+  },
+  {
+   "chain": "A_RC",
+   "site": "A1_Pstar_to_Bchl",
+   "dG_eV": -0.25,
+   "lambda_eV": 0.25,
+   "lambda_caliber": "site_measured",
+   "r": 1.0,
+   "region": "activationless"
+  },
+  {
+   "chain": "A_RC",
+   "site": "A2_Bchl_to_Bphe",
+   "dG_eV": null,
+   "lambda_eV": null,
+   "lambda_caliber": "-",
+   "r": null,
+   "region": "no_dG_data"
+  },
+  {
+   "chain": "A_RC",
+   "site": "A3_Bphe_to_QA",
+   "dG_eV": null,
+   "lambda_eV": null,
+   "lambda_caliber": "-",
+   "r": null,
+   "region": "no_dG_data"
+  },
+  {
+   "chain": "A_RC",
+   "site": "A4_QA_to_QB",
+   "dG_eV": null,
+   "lambda_eV": null,
+   "lambda_caliber": "-",
+   "r": null,
+   "region": "no_dG_data"
+  },
+  {
+   "chain": "A_RC",
+   "site": "A5_charge_recombination_Pplus_Hminus",
+   "dG_eV": -1.1,
+   "lambda_eV": 0.25,
+   "lambda_caliber": "site_measured",
+   "r": 4.4,
+   "region": "inverted"
+  },
+  {
+   "chain": "A_RC",
+   "site": "A6_QB_site_chemistry_lambda",
+   "dG_eV": null,
+   "lambda_eV": null,
+   "lambda_caliber": "-",
+   "r": null,
+   "region": "no_dG_data"
+  },
+  {
+   "chain": "complex_I",
+   "site": "complex_I:B1_FMNL_to_N3 (代表 FMN 后第一跳)",
+   "dG_eV": 0,
+   "lambda_eV": 0.5,
+   "lambda_caliber": "site_measured",
+   "r": 0.0,
+   "region": "normal"
+  },
+  {
+   "chain": "complex_I",
+   "site": "complex_I:B1_N3_to_N1b",
+   "dG_eV": 0,
+   "lambda_eV": 0.5,
+   "lambda_caliber": "site_measured",
+   "r": 0.0,
+   "region": "normal"
+  },
+  {
+   "chain": "complex_I",
+   "site": "complex_I:B1_N1b_to_N4",
+   "dG_eV": 0,
+   "lambda_eV": 0.5,
+   "lambda_caliber": "site_measured",
+   "r": 0.0,
+   "region": "normal"
+  },
+  {
+   "chain": "complex_I",
+   "site": "complex_I:B1_N4_to_N5",
+   "dG_eV": 0,
+   "lambda_eV": 0.5,
+   "lambda_caliber": "site_measured",
+   "r": 0.0,
+   "region": "normal"
+  },
+  {
+   "chain": "complex_I",
+   "site": "complex_I:B1_N5_to_N6a",
+   "dG_eV": 0,
+   "lambda_eV": 0.5,
+   "lambda_caliber": "site_measured",
+   "r": 0.0,
+   "region": "normal"
+  },
+  {
+   "chain": "complex_I",
+   "site": "complex_I:B1_N6a_to_N6b",
+   "dG_eV": 0,
+   "lambda_eV": 0.5,
+   "lambda_caliber": "site_measured",
+   "r": 0.0,
+   "region": "normal"
+  },
+  {
+   "chain": "complex_I",
+   "site": "complex_I:B1_N6b_to_N2",
+   "dG_eV": -0.15,
+   "lambda_eV": 0.5,
+   "lambda_caliber": "site_measured",
+   "r": 0.3,
+   "region": "normal"
+  },
+  {
+   "chain": "complex_I",
+   "site": "complex_I:B1_N2_to_Q",
+   "dG_eV": null,
+   "lambda_eV": null,
+   "lambda_caliber": "-",
+   "r": null,
+   "region": "no_dG_data"
+  },
+  {
+   "chain": "complex_III_bc1",
+   "site": "complex_III_bc1:B3_QH2Qo_to_2Fe2S",
+   "dG_eV": null,
+   "lambda_eV": null,
+   "lambda_caliber": "-",
+   "r": null,
+   "region": "no_dG_data"
+  },
+  {
+   "chain": "complex_III_bc1",
+   "site": "complex_III_bc1:B3_Qdot_to_bL",
+   "dG_eV": null,
+   "lambda_eV": null,
+   "lambda_caliber": "-",
+   "r": null,
+   "region": "no_dG_data"
+  },
+  {
+   "chain": "complex_III_bc1",
+   "site": "complex_III_bc1:B3_bL_to_bH",
+   "dG_eV": null,
+   "lambda_eV": null,
+   "lambda_caliber": "-",
+   "r": null,
+   "region": "no_dG_data"
+  },
+  {
+   "chain": "complex_III_bc1",
+   "site": "complex_III_bc1:B3_2Fe2S_to_c1",
+   "dG_eV": -0.02,
+   "lambda_eV": 1.0,
+   "lambda_caliber": "site_measured",
+   "r": 0.02,
+   "region": "normal"
+  },
+  {
+   "chain": "complex_III_bc1",
+   "site": "complex_III_bc1:B3_c1_to_cytC",
+   "dG_eV": null,
+   "lambda_eV": null,
+   "lambda_caliber": "-",
+   "r": null,
+   "region": "no_dG_data"
+  },
+  {
+   "chain": "complex_IV_cytC_oxidase",
+   "site": "complex_IV_cytC_oxidase:B4_cytC_to_CuA",
+   "dG_eV": null,
+   "lambda_eV": null,
+   "lambda_caliber": "-",
+   "r": null,
+   "region": "no_dG_data"
+  },
+  {
+   "chain": "complex_IV_cytC_oxidase",
+   "site": "complex_IV_cytC_oxidase:B4_CuA_to_haem_a",
+   "dG_eV": -0.02,
+   "lambda_eV": 0.7,
+   "lambda_caliber": "site_measured",
+   "r": 0.029,
+   "region": "normal"
+  },
+  {
+   "chain": "complex_IV_cytC_oxidase",
+   "site": "complex_IV_cytC_oxidase:B4_haem_a_to_a3",
+   "dG_eV": -0.02,
+   "lambda_eV": 0.7,
+   "lambda_caliber": "site_measured",
+   "r": 0.029,
+   "region": "normal"
+  },
+  {
+   "chain": "complex_IV_cytC_oxidase",
+   "site": "complex_IV_cytC_oxidase:B4_CuA_to_a3_shortcircuit",
+   "dG_eV": -0.04,
+   "lambda_eV": 0.7,
+   "lambda_caliber": "site_measured",
+   "r": 0.057,
+   "region": "normal"
+  },
+  {
+   "chain": "complex_IV_cytC_oxidase",
+   "site": "complex_IV_cytC_oxidase:B4_a3_CuB_to_O2",
+   "dG_eV": null,
+   "lambda_eV": null,
+   "lambda_caliber": "-",
+   "r": null,
+   "region": "no_dG_data"
+  }
+ ],
+ "summary": {
+  "normal": 12,
+  "activationless": 1,
+  "no_dG_data": 11,
+  "inverted": 1
+ }
+}

@@ -1,0 +1,192 @@
+{
+ "H": {
+  "Z": 1,
+  "ionization_energy_eV_first": "13.598",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "He": {
+  "Z": 2,
+  "ionization_energy_eV_first": "24.587",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Li": {
+  "Z": 3,
+  "ionization_energy_eV_first": "5.392",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Be": {
+  "Z": 4,
+  "ionization_energy_eV_first": "9.323",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "B": {
+  "Z": 5,
+  "ionization_energy_eV_first": "8.298",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "C": {
+  "Z": 6,
+  "ionization_energy_eV_first": "11.260",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "N": {
+  "Z": 7,
+  "ionization_energy_eV_first": "14.534",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "O": {
+  "Z": 8,
+  "ionization_energy_eV_first": "13.618",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "F": {
+  "Z": 9,
+  "ionization_energy_eV_first": "17.423",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Ne": {
+  "Z": 10,
+  "ionization_energy_eV_first": "21.565",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Na": {
+  "Z": 11,
+  "ionization_energy_eV_first": "5.139",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Mg": {
+  "Z": 12,
+  "ionization_energy_eV_first": "7.646",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Al": {
+  "Z": 13,
+  "ionization_energy_eV_first": "5.986",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Si": {
+  "Z": 14,
+  "ionization_energy_eV_first": "8.152",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "P": {
+  "Z": 15,
+  "ionization_energy_eV_first": "10.487",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "S": {
+  "Z": 16,
+  "ionization_energy_eV_first": "10.360",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Cl": {
+  "Z": 17,
+  "ionization_energy_eV_first": "12.968",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Ar": {
+  "Z": 18,
+  "ionization_energy_eV_first": "15.760",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "K": {
+  "Z": 19,
+  "ionization_energy_eV_first": "4.341",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Ca": {
+  "Z": 20,
+  "ionization_energy_eV_first": "6.113",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Sc": {
+  "Z": 21,
+  "ionization_energy_eV_first": "6.561",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Ti": {
+  "Z": 22,
+  "ionization_energy_eV_first": "6.828",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "V": {
+  "Z": 23,
+  "ionization_energy_eV_first": "6.746",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Cr": {
+  "Z": 24,
+  "ionization_energy_eV_first": "6.767",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Mn": {
+  "Z": 25,
+  "ionization_energy_eV_first": "7.434",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Fe": {
+  "Z": 26,
+  "ionization_energy_eV_first": "7.902",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Co": {
+  "Z": 27,
+  "ionization_energy_eV_first": "7.881",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Ni": {
+  "Z": 28,
+  "ionization_energy_eV_first": "7.640",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Cu": {
+  "Z": 29,
+  "ionization_energy_eV_first": "7.726",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Zn": {
+  "Z": 30,
+  "ionization_energy_eV_first": "9.394",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Ga": {
+  "Z": 31,
+  "ionization_energy_eV_first": "5.999",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Ge": {
+  "Z": 32,
+  "ionization_energy_eV_first": "7.900",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "As": {
+  "Z": 33,
+  "ionization_energy_eV_first": "9.815",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Se": {
+  "Z": 34,
+  "ionization_energy_eV_first": "9.752",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Br": {
+  "Z": 35,
+  "ionization_energy_eV_first": "11.814",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Kr": {
+  "Z": 36,
+  "ionization_energy_eV_first": "14.000",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Xe": {
+  "Z": 54,
+  "ionization_energy_eV_first": "12.130",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ },
+ "Rn": {
+  "Z": 86,
+  "ionization_energy_eV_first": "10.745",
+  "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON (accessed 2026-09-02); raw JSON archived as pubchem_periodictable_raw.json"
+ }
+}

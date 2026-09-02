@@ -1,0 +1,1286 @@
+{
+ "H": {
+  "symbol": "H",
+  "Z": 1,
+  "ie_eV": [
+   13.598434599702
+  ],
+  "shells_after_removal": [
+   "1s"
+  ],
+  "n_levels_note": "levels 1..1 (element has only 1 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000000000012"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=H&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "He": {
+  "symbol": "He",
+  "Z": 2,
+  "ie_eV": [
+   24.587389011,
+   54.4177655282
+  ],
+  "shells_after_removal": [
+   "1s2",
+   "1s"
+  ],
+  "n_levels_note": "levels 1..2 (element has only 2 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000000025",
+   "0.0000000010"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=He&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Li": {
+  "symbol": "Li",
+  "Z": 3,
+  "ie_eV": [
+   5.391714996,
+   75.640097,
+   122.45435913
+  ],
+  "shells_after_removal": [
+   "1s2.2s",
+   "1s2",
+   "1s"
+  ],
+  "n_levels_note": "levels 1..3 (element has only 3 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000000022",
+   "0.0000012",
+   "0.00000011"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Li&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Be": {
+  "symbol": "Be",
+  "Z": 4,
+  "ie_eV": [
+   9.322699,
+   18.21115,
+   153.896205,
+   217.71858459
+  ],
+  "shells_after_removal": [
+   "1s2.2s2",
+   "1s2.2s",
+   "1s2",
+   "1s"
+  ],
+  "n_levels_note": "levels 1..4 (element has only 4 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000007",
+   "0.00004",
+   "0.000004",
+   "0.00000010"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Be&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "B": {
+  "symbol": "B",
+  "Z": 5,
+  "ie_eV": [
+   8.298019,
+   25.15483,
+   37.93059,
+   259.374379,
+   340.2260225
+  ],
+  "shells_after_removal": [
+   "1s2.2s2.2p",
+   "1s2.2s2",
+   "1s2.2s",
+   "1s2",
+   "1s"
+  ],
+  "n_levels_note": "levels 1..5 (element has only 5 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000003",
+   "0.00005",
+   "0.00007",
+   "0.000009",
+   "0.0000006"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=B&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "C": {
+  "symbol": "C",
+  "Z": 6,
+  "ie_eV": [
+   11.260288,
+   24.383143,
+   47.88778,
+   64.49352,
+   392.09056,
+   489.99320779
+  ],
+  "shells_after_removal": [
+   "1s2.2s2.2p2",
+   "1s2.2s2.2p",
+   "1s2.2s2",
+   "1s2.2s",
+   "1s2",
+   "1s"
+  ],
+  "n_levels_note": "levels 1..6 (element has only 6 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.0000011",
+   "0.000012",
+   "0.00025",
+   "0.00019",
+   "0.00004",
+   "0.00000022"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=C&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "N": {
+  "symbol": "N",
+  "Z": 7,
+  "ie_eV": [
+   14.53413,
+   29.60125,
+   47.4453,
+   77.4735,
+   97.8901,
+   552.06741,
+   667.0461377
+  ],
+  "shells_after_removal": [
+   "1s2.2s2.2p3",
+   "1s2.2s2.2p2",
+   "1s2.2s2.2p",
+   "1s2.2s2",
+   "1s2.2s",
+   "1s2",
+   "1s"
+  ],
+  "n_levels_note": "levels 1..7 (element has only 7 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.00004",
+   "0.00009",
+   "0.0025",
+   "0.0004",
+   "0.0004",
+   "0.00008",
+   "0.0000007"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=N&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "O": {
+  "symbol": "O",
+  "Z": 8,
+  "ie_eV": [
+   13.618055,
+   35.12112,
+   54.93554,
+   77.4135,
+   113.899,
+   138.1189,
+   739.32697,
+   871.4099138
+  ],
+  "shells_after_removal": [
+   "1s2.2s2.2p4",
+   "1s2.2s2.2p3",
+   "1s2.2s2.2p2",
+   "1s2.2s2.2p",
+   "1s2.2s2",
+   "1s2.2s",
+   "1s2",
+   "1s"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 8 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000007",
+   "0.00006",
+   "0.00012",
+   "0.00025",
+   "0.0005",
+   "0.0021",
+   "0.00015",
+   "0.0000012"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=O&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "F": {
+  "symbol": "F",
+  "Z": 9,
+  "ie_eV": [
+   17.42282,
+   34.97081,
+   62.70798,
+   87.175,
+   114.249,
+   157.16311,
+   185.1868,
+   953.8983
+  ],
+  "shells_after_removal": [
+   "1s2.2s2.2p5",
+   "1s2.2s2.2p4",
+   "1s2.2s2.2p3",
+   "1s2.2s2.2p2",
+   "1s2.2s2.2p",
+   "1s2.2s2",
+   "1s2.2s",
+   "1s2"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 9 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.00005",
+   "0.00012",
+   "0.00025",
+   "0.017",
+   "0.006",
+   "0.00025",
+   "0.0006",
+   "0.0003"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=F&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Ne": {
+  "symbol": "Ne",
+  "Z": 10,
+  "ie_eV": [
+   21.564541,
+   40.96297,
+   63.4233,
+   97.19,
+   126.247,
+   157.934,
+   207.271,
+   239.097
+  ],
+  "shells_after_removal": [
+   "1s2.2s2.2p6",
+   "1s2.2s2.2p5",
+   "1s2.2s2.2p4",
+   "1s2.2s2.2p3",
+   "1s2.2s2.2p2",
+   "1s2.2s2.2p",
+   "1s2.2s2",
+   "1s2.2s"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 10 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000007",
+   "0.00004",
+   "0.0003",
+   "0.0025",
+   "0.012",
+   "0.005",
+   "0.012",
+   "0.0019"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Ne&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Na": {
+  "symbol": "Na",
+  "Z": 11,
+  "ie_eV": [
+   5.13907696,
+   47.28636,
+   71.62,
+   98.936,
+   138.404,
+   172.23,
+   208.504,
+   264.192
+  ],
+  "shells_after_removal": [
+   "[Ne].3s",
+   "1s2.2s2.2p6",
+   "1s2.2s2.2p5",
+   "1s2.2s2.2p4",
+   "1s2.2s2.2p3",
+   "1s2.2s2.2p2",
+   "1s2.2s2.2p",
+   "1s2.2s2"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 11 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.00000025",
+   "0.00025",
+   "0.0012",
+   "0.012",
+   "0.012",
+   "0.05",
+   "0.012",
+   "0.022"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Na&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Mg": {
+  "symbol": "Mg",
+  "Z": 12,
+  "ie_eV": [
+   7.646236,
+   15.035271,
+   80.1436,
+   109.2654,
+   141.33,
+   186.76,
+   225.02,
+   265.924
+  ],
+  "shells_after_removal": [
+   "[Ne].3s2",
+   "[Ne].3s",
+   "1s2.2s2.2p6",
+   "1s2.2s2.2p5",
+   "1s2.2s2.2p4",
+   "1s2.2s2.2p3",
+   "1s2.2s2.2p2",
+   "1s2.2s2.2p"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 12 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000004",
+   "0.000006",
+   "0.0006",
+   "0.0012",
+   "0.03",
+   "0.06",
+   "0.06",
+   "0.019"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Mg&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Al": {
+  "symbol": "Al",
+  "Z": 13,
+  "ie_eV": [
+   5.985769,
+   18.82855,
+   28.447642,
+   119.9924,
+   153.8252,
+   190.49,
+   241.76,
+   284.64
+  ],
+  "shells_after_removal": [
+   "[Ne].3s2.3p",
+   "[Ne].3s2",
+   "[Ne].3s",
+   "1s2.2s2.2p6",
+   "1s2.2s2.2p5",
+   "1s2.2s2.2p4",
+   "1s2.2s2.2p3",
+   "1s2.2s2.2p2"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 13 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000003",
+   "0.00005",
+   "0.000025",
+   "0.0019",
+   "0.0025",
+   "0.05",
+   "0.09",
+   "0.07"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Al&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Si": {
+  "symbol": "Si",
+  "Z": 14,
+  "ie_eV": [
+   8.15168,
+   16.34585,
+   33.493,
+   45.14179,
+   166.767,
+   205.279,
+   246.57,
+   303.59
+  ],
+  "shells_after_removal": [
+   "[Ne].3s2.3p2",
+   "[Ne].3s2.3p",
+   "[Ne].3s2",
+   "[Ne].3s",
+   "1s2.2s2.2p6",
+   "1s2.2s2.2p5",
+   "1s2.2s2.2p4",
+   "1s2.2s2.2p3"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 14 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.00003",
+   "0.00004",
+   "0.00009",
+   "0.00007",
+   "0.003",
+   "0.005",
+   "0.05",
+   "0.05"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Si&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "P": {
+  "symbol": "P",
+  "Z": 15,
+  "ie_eV": [
+   10.486686,
+   19.76949,
+   30.20264,
+   51.44387,
+   65.02511,
+   220.43,
+   263.57,
+   309.6
+  ],
+  "shells_after_removal": [
+   "[Ne].3s2.3p3",
+   "[Ne].3s2.3p2",
+   "[Ne].3s2.3p",
+   "[Ne].3s2",
+   "[Ne].3s",
+   "1s2.2s2.2p6",
+   "1s2.2s2.2p5",
+   "1s2.2s2.2p4"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 15 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000015",
+   "0.00004",
+   "0.00009",
+   "0.00012",
+   "0.00012",
+   "0.005",
+   "0.06",
+   "0.10"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=P&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "S": {
+  "symbol": "S",
+  "Z": 16,
+  "ie_eV": [
+   10.3600167,
+   23.33788,
+   34.86,
+   47.222,
+   72.5945,
+   88.0529,
+   280.954,
+   328.794
+  ],
+  "shells_after_removal": [
+   "[Ne].3s2.3p4",
+   "[Ne].3s2.3p3",
+   "[Ne].3s2.3p2",
+   "[Ne].3s2.3p",
+   "[Ne].3s2",
+   "[Ne].3s",
+   "1s2.2s2.2p6",
+   "1s2.2s2.2p5"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 16 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.0000014",
+   "0.00025",
+   "0.04",
+   "0.012",
+   "0.0004",
+   "0.0004",
+   "0.007",
+   "0.007"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=S&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Cl": {
+  "symbol": "Cl",
+  "Z": 17,
+  "ie_eV": [
+   12.967633,
+   23.81364,
+   39.8,
+   53.24,
+   67.68,
+   96.94,
+   114.2013,
+   348.306
+  ],
+  "shells_after_removal": [
+   "[Ne].3s2.3p5",
+   "[Ne].3s2.3p4",
+   "[Ne].3s2.3p3",
+   "[Ne].3s2.3p2",
+   "[Ne].3s2.3p",
+   "[Ne].3s2",
+   "[Ne].3s",
+   "1s2.2s2.2p6"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 17 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000016",
+   "0.00012",
+   "0.11",
+   "0.12",
+   "0.10",
+   "0.04",
+   "0.0006",
+   "0.007"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Cl&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Ar": {
+  "symbol": "Ar",
+  "Z": 18,
+  "ie_eV": [
+   15.7596119,
+   27.62967,
+   40.735,
+   59.58,
+   74.84,
+   91.29,
+   124.41,
+   143.4567
+  ],
+  "shells_after_removal": [
+   "[Ne].3s2.3p6",
+   "[Ne].3s2.3p5",
+   "[Ne].3s2.3p4",
+   "[Ne].3s2.3p3",
+   "[Ne].3s2.3p2",
+   "[Ne].3s2.3p",
+   "[Ne].3s2",
+   "[Ne].3s"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 18 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.0000005",
+   "0.00012",
+   "0.012",
+   "0.18",
+   "0.17",
+   "0.010",
+   "0.06",
+   "0.0012"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Ar&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "K": {
+  "symbol": "K",
+  "Z": 19,
+  "ie_eV": [
+   4.34066373,
+   31.625,
+   45.8031,
+   60.917,
+   82.66,
+   99.44,
+   117.56,
+   154.87
+  ],
+  "shells_after_removal": [
+   "[Ar].4s",
+   "[Ne].3s2.3p6",
+   "[Ne].3s2.3p5",
+   "[Ne].3s2.3p4",
+   "[Ne].3s2.3p3",
+   "[Ne].3s2.3p2",
+   "[Ne].3s2.3p",
+   "[Ne].3s2"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 19 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.00000009",
+   "0.00019",
+   "0.0017",
+   "0.019",
+   "0.16",
+   "0.20",
+   "0.11",
+   "0.05"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=K&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Ca": {
+  "symbol": "Ca",
+  "Z": 20,
+  "ie_eV": [
+   6.113154921,
+   11.871719,
+   50.91316,
+   67.2732,
+   84.34,
+   108.78,
+   127.21,
+   147.24
+  ],
+  "shells_after_removal": [
+   "[Ar].4s2",
+   "[Ar].4s",
+   "[Ne].3s2.3p6",
+   "[Ne].3s2.3p5",
+   "[Ne].3s2.3p4",
+   "[Ne].3s2.3p3",
+   "[Ne].3s2.3p2",
+   "[Ne].3s2.3p"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 20 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.0000000005",
+   "0.000004",
+   "0.00025",
+   "0.0021",
+   "0.08",
+   "0.25",
+   "0.25",
+   "0.12"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Ca&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Sc": {
+  "symbol": "Sc",
+  "Z": 21,
+  "ie_eV": [
+   6.56149,
+   12.79977,
+   24.756839,
+   73.4894,
+   91.95,
+   110.68,
+   137.99,
+   158.08
+  ],
+  "shells_after_removal": [
+   "[Ar].3d.4s2",
+   "[Ar].3d.4s",
+   "[Ar].3d",
+   "[Ne].3s2.3p6",
+   "[Ne].3s2.3p5",
+   "[Ne].3s2.3p4",
+   "[Ne].3s2.3p3",
+   "[Ne].3s2.3p2"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 21 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.00006",
+   "0.00025",
+   "0.000012",
+   "0.0004",
+   "0.03",
+   "0.05",
+   "0.25",
+   "0.25"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Sc&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Ti": {
+  "symbol": "Ti",
+  "Z": 22,
+  "ie_eV": [
+   6.82812,
+   13.5755,
+   27.49171,
+   43.26717,
+   99.299,
+   119.533,
+   140.68,
+   170.5
+  ],
+  "shells_after_removal": [
+   "[Ar].3d2.4s2",
+   "[Ar].3d2.4s",
+   "[Ar].3d2",
+   "[Ar].3d",
+   "[Ne].3s2.3p6",
+   "[Ne].3s2.3p5",
+   "[Ne].3s2.3p4",
+   "[Ne].3s2.3p3"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 22 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000012",
+   "0.0025",
+   "0.00025",
+   "0.00019",
+   "0.012",
+   "0.025",
+   "0.18",
+   "0.4"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Ti&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "V": {
+  "symbol": "V",
+  "Z": 23,
+  "ie_eV": [
+   6.746187,
+   14.634,
+   29.3111,
+   46.709,
+   65.28165,
+   128.125,
+   150.72,
+   173.55
+  ],
+  "shells_after_removal": [
+   "[Ar].3d3.4s2",
+   "[Ar].3d4",
+   "[Ar].3d3",
+   "[Ar].3d2",
+   "[Ar].3d",
+   "[Ne].3s2.3p6",
+   "[Ne].3s2.3p5",
+   "[Ne].3s2.3p4"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 23 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000021",
+   "0.007",
+   "0.0025",
+   "0.005",
+   "0.00017",
+   "0.025",
+   "0.13",
+   "0.21"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=V&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Cr": {
+  "symbol": "Cr",
+  "Z": 24,
+  "ie_eV": [
+   6.76651,
+   16.486305,
+   30.959,
+   49.16,
+   69.46,
+   90.6349,
+   160.29,
+   184.76
+  ],
+  "shells_after_removal": [
+   "[Ar].3d5.4s",
+   "[Ar].3d5",
+   "[Ar].3d4",
+   "[Ar].3d3",
+   "[Ar].3d2",
+   "[Ar].3d",
+   "[Ne].3s2.3p6",
+   "[Ne].3s2.3p5"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 24 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.00004",
+   "0.000015",
+   "0.025",
+   "0.05",
+   "0.04",
+   "0.0007",
+   "0.06",
+   "0.15"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Cr&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Mn": {
+  "symbol": "Mn",
+  "Z": 25,
+  "ie_eV": [
+   7.434038,
+   15.63999,
+   33.668,
+   51.21,
+   72.41,
+   95.604,
+   119.203,
+   195.5
+  ],
+  "shells_after_removal": [
+   "[Ar].3d5.4s2",
+   "[Ar].3d5.4s",
+   "[Ar].3d5",
+   "[Ar].3d4",
+   "[Ar].3d3",
+   "[Ar].3d2",
+   "[Ar].3d",
+   "[Ne].3s2.3p6"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 25 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.0000012",
+   "0.00007",
+   "0.012",
+   "0.12",
+   "0.10",
+   "0.025",
+   "0.012",
+   "0.3"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Mn&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Fe": {
+  "symbol": "Fe",
+  "Z": 26,
+  "ie_eV": [
+   7.9024681,
+   16.19921,
+   30.651,
+   54.91,
+   75.0,
+   98.985,
+   124.9671,
+   151.06
+  ],
+  "shells_after_removal": [
+   "[Ar].3d6.4s2",
+   "[Ar].3d6.4s",
+   "[Ar].3d6",
+   "[Ar].3d5",
+   "[Ar].3d4",
+   "[Ar].3d3",
+   "[Ar].3d2",
+   "[Ar].3d"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 26 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.0000012",
+   "0.00005",
+   "0.012",
+   "0.04",
+   "0.15",
+   "0.015",
+   "0.0025",
+   "0.012"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Fe&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Co": {
+  "symbol": "Co",
+  "Z": 27,
+  "ie_eV": [
+   7.88101,
+   17.0844,
+   33.5,
+   51.27,
+   79.5,
+   102.0,
+   128.9,
+   157.8
+  ],
+  "shells_after_removal": [
+   "[Ar].3d7.4s2",
+   "[Ar].3d8",
+   "[Ar].3d7",
+   "[Ar].3d6",
+   "[Ar].3d5",
+   "[Ar].3d4",
+   "[Ar].3d3",
+   "[Ar].3d2"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 27 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.00012",
+   "0.0012",
+   "0.06",
+   "0.10",
+   "0.20",
+   "0.20",
+   "0.5",
+   "0.6"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Co&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Ni": {
+  "symbol": "Ni",
+  "Z": 28,
+  "ie_eV": [
+   7.639878,
+   18.168838,
+   35.187,
+   54.92,
+   76.06,
+   108.0,
+   132.0,
+   162.0
+  ],
+  "shells_after_removal": [
+   "[Ar].3d8.4s2",
+   "[Ar].3d9",
+   "[Ar].3d8",
+   "[Ar].3d7",
+   "[Ar].3d6",
+   "[Ar].3d5",
+   "[Ar].3d4",
+   "[Ar].3d3"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 28 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000017",
+   "0.000025",
+   "0.019",
+   "0.25",
+   "0.06",
+   "1.0",
+   "2.0",
+   "2.1"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Ni&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Cu": {
+  "symbol": "Cu",
+  "Z": 29,
+  "ie_eV": [
+   7.72638,
+   20.29239,
+   36.841,
+   57.38,
+   79.8,
+   103.0,
+   139.0,
+   166.0
+  ],
+  "shells_after_removal": [
+   "[Ar].3d10.4s",
+   "[Ar].3d10",
+   "[Ar].3d9",
+   "[Ar].3d8",
+   "[Ar].3d7",
+   "[Ar].3d6",
+   "[Ar].3d5",
+   "[Ar].3d4"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 29 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000004",
+   "0.00006",
+   "0.012",
+   "0.05",
+   "0.7",
+   "1.0",
+   "1.2",
+   "2.1"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Cu&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Zn": {
+  "symbol": "Zn",
+  "Z": 30,
+  "ie_eV": [
+   9.394197,
+   17.96439,
+   39.7233,
+   59.573,
+   82.6,
+   108.0,
+   133.9,
+   173.9
+  ],
+  "shells_after_removal": [
+   "[Ar].3d10.4s2",
+   "[Ar].3d10.4s",
+   "[Ar].3d10",
+   "[Ar].3d9",
+   "[Ar].3d8",
+   "[Ar].3d7",
+   "[Ar].3d6",
+   "[Ar].3d5"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 30 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000006",
+   "0.00025",
+   "0.00012",
+   "0.019",
+   "0.9",
+   "1.0",
+   "1.2",
+   "1.7"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Zn&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Ga": {
+  "symbol": "Ga",
+  "Z": 31,
+  "ie_eV": [
+   5.999302,
+   20.51514,
+   30.72576,
+   63.241,
+   86.01,
+   112.7,
+   140.8,
+   169.9
+  ],
+  "shells_after_removal": [
+   "[Ar].3d10.4s2.4p",
+   "[Ar].3d10.4s2",
+   "[Ar].3d10.4s",
+   "[Ar].3d10",
+   "[Ar].3d9",
+   "[Ar].3d8",
+   "[Ar].3d7",
+   "[Ar].3d6"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 31 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.0000012",
+   "0.00012",
+   "0.00025",
+   "0.009",
+   "0.12",
+   "1.1",
+   "1.4",
+   "1.7"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Ga&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Ge": {
+  "symbol": "Ge",
+  "Z": 32,
+  "ie_eV": [
+   7.899435,
+   15.93461,
+   34.0576,
+   45.7155,
+   90.5,
+   115.9,
+   144.9,
+   176.4
+  ],
+  "shells_after_removal": [
+   "[Ar].3d10.4s2.4p2",
+   "[Ar].3d10.4s2.4p",
+   "[Ar].3d10.4s2",
+   "[Ar].3d10.4s",
+   "[Ar].3d10",
+   "[Ar].3d9",
+   "[Ar].3d8",
+   "[Ar].3d7"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 32 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000012",
+   "0.000025",
+   "0.0012",
+   "0.0012",
+   "0.019",
+   "0.12",
+   "1.5",
+   "1.7"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Ge&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "As": {
+  "symbol": "As",
+  "Z": 33,
+  "ie_eV": [
+   9.78855,
+   18.5892,
+   28.349,
+   50.15,
+   62.77,
+   121.19,
+   147.0,
+   180.0
+  ],
+  "shells_after_removal": [
+   "[Ar].3d10.4s2.4p3",
+   "[Ar].3d10.4s2.4p2",
+   "[Ar].3d10.4s2.4p",
+   "[Ar].3d10.4s2",
+   "[Ar].3d10.4s",
+   "[Ar].3d10",
+   "[Ar].3d9",
+   "[Ar].3d8"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 33 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.00025",
+   "0.0010",
+   "0.012",
+   "0.06",
+   "0.06",
+   "0.06",
+   "2.0",
+   "2.1"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=As&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Se": {
+  "symbol": "Se",
+  "Z": 34,
+  "ie_eV": [
+   9.752368,
+   21.196,
+   31.697,
+   42.947,
+   68.3,
+   81.83,
+   155.327,
+   184.0
+  ],
+  "shells_after_removal": [
+   "[Ar].3d10.4s2.4p4",
+   "[Ar].3d10.4s2.4p3",
+   "[Ar].3d10.4s2.4p2",
+   "[Ar].3d10.4s2.4p",
+   "[Ar].3d10.4s2",
+   "[Ar].3d10.4s",
+   "[Ar].3d10",
+   "[Ar].3d9"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 34 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.000006",
+   "0.010",
+   "0.019",
+   "0.003",
+   "0.10",
+   "0.03",
+   "0.012",
+   "2.1"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Se&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Br": {
+  "symbol": "Br",
+  "Z": 35,
+  "ie_eV": [
+   11.81381,
+   21.591,
+   34.871,
+   47.782,
+   59.595,
+   87.39,
+   103.03,
+   192.61
+  ],
+  "shells_after_removal": [
+   "[Ar].3d10.4s2.4p5",
+   "[Ar].3d10.4s2.4p4",
+   "[Ar].3d10.4s2.4p3",
+   "[Ar].3d10.4s2.4p2",
+   "[Ar].3d10.4s2.4p",
+   "[Ar].3d10.4s2",
+   "[Ar].3d10.4s",
+   "[Ar].3d10"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 35 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.00006",
+   "",
+   "0.019",
+   "0.012",
+   "0.025",
+   "0.025",
+   "0.19",
+   "0.06"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Br&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Kr": {
+  "symbol": "Kr",
+  "Z": 36,
+  "ie_eV": [
+   13.9996055,
+   24.35984,
+   35.838,
+   50.85,
+   64.69,
+   78.49,
+   109.13,
+   125.802
+  ],
+  "shells_after_removal": [
+   "[Ar].3d10.4s2.4p6",
+   "[Ar].3d10.4s2.4p5",
+   "[Ar].3d10.4s2.4p4",
+   "[Ar].3d10.4s2.4p3",
+   "[Ar].3d10.4s2.4p2",
+   "[Ar].3d10.4s2.4p",
+   "[Ar].3d10.4s2",
+   "[Ar].3d10.4s"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 36 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.0000020",
+   "0.00012",
+   "0.020",
+   "0.11",
+   "0.20",
+   "0.20",
+   "0.05",
+   "0.003"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Kr&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Xe": {
+  "symbol": "Xe",
+  "Z": 54,
+  "ie_eV": [
+   12.1298437,
+   20.975,
+   31.05,
+   42.2,
+   54.1,
+   66.703,
+   91.6,
+   105.9778
+  ],
+  "shells_after_removal": [
+   "[Cd].5p6",
+   "[Cd].5p5",
+   "[Cd].5p4",
+   "[Cd].5p3",
+   "[Cd].5p2",
+   "[Cd].5p",
+   "[Kr].4d10.5s2",
+   "[Kr].4d10.5s"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 54 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "0.0000015",
+   "0.004",
+   "0.04",
+   "0.20",
+   "0.5",
+   "0.007",
+   "0.5",
+   "0.0025"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Xe&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ },
+ "Rn": {
+  "symbol": "Rn",
+  "Z": 86,
+  "ie_eV": [
+   10.7485,
+   18.99,
+   29.4,
+   36.9,
+   52.9,
+   64.0,
+   88.0,
+   102.0
+  ],
+  "shells_after_removal": [
+   "[Hg].6p6",
+   "[Hg].6p5",
+   "[Hg].6p4",
+   "[Hg].6p3",
+   "[Hg].6p2",
+   "[Hg].6p",
+   "[Xe].4f14.5d10.6s2",
+   "[Xe].4f14.5d10.6s"
+  ],
+  "n_levels_note": "levels 1..8 (element has only 86 electrons; NIST provides all successive IE up to fully stripped)",
+  "uncertainty_eV": [
+   "",
+   "0.06",
+   "1.0",
+   "1.7",
+   "1.9",
+   "2.0",
+   "2.0",
+   "2.1"
+  ],
+  "source": "NIST Atomic Spectra Database Ionization Energies (ie.pl), units=eV, format=TSV; accessed 2026-09-02; query URL: https://physics.nist.gov/cgi-bin/ASD/ie.pl?spectra=Rn&units=1&format=3&order=0&at_num_out=on&sp_name_out=on&ion_charge_out=on&el_name_out=on&seq_out=on&shells_out=on&level_out=on&e_out=0&unc_out=on&biblio=on&submit=Retrieve+Data"
+ }
+}
