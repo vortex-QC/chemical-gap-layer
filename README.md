@@ -2,8 +2,8 @@
 
 **The Chemical Gap Layer: Locating the Arena of Matter Coupling and Decoupling**
 
-- CN: [doi:10.5281/zenodo.22249369](https://doi.org/10.5281/zenodo.22249369)
-- EN: [doi:10.5281/zenodo.22249374](https://doi.org/10.5281/zenodo.22249374)
+- CN: v1.1 [doi:10.5281/zenodo.22269523](https://doi.org/10.5281/zenodo.22269523) (v1.0: [22249369](https://doi.org/10.5281/zenodo.22249369))
+- EN: v1.1 [doi:10.5281/zenodo.22269560](https://doi.org/10.5281/zenodo.22269560) (v1.0: [22249374](https://doi.org/10.5281/zenodo.22249374))
 - Preprint series: native-unknown / array line (see [vortex-QC/native-unknown-array](https://github.com/vortex-QC/native-unknown-array), Zenodo 22220040/22220164 v1.0, 22233498/22233508 v1.1)
 
 ## Contents
@@ -25,3 +25,7 @@
 ## License
 
 CC-BY 4.0 for text; scripts/data as deposited.
+
+## v1.1 (2026-09-03)
+
+Mechanism-deepening update: 4p lone-pair cross-period regularity, dual-channel inertness criterion finalized, beta provenance settled, vdW dimer precise values (two-cluster separation), bc1 potentials expanded (20/25 stations), Mg-O three-projection reading, nitrogenase third-chain blind replication, gap-formation threshold interval (35, 65) mV + D5 design. All 33 references re-verified: 32 verified + 1 DOI correction (ref. 24 Lucovsky -> 10.1103/PhysRevB.4.1367). Files: `chemical_gap_layer_v1.1_CN.md` / `_EN.md` / `化学间隙层_v1.1_引文核验表.json`.
